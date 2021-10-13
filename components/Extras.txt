@@ -1,0 +1,3 @@
+Aquí vendran todos los extra:
+- Colores
+- Fuentes
