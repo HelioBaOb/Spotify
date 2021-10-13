@@ -6,7 +6,7 @@ const LibraryScreen = (props) =>{
 
     return(
         <View style={styles.container}>
-            <Text>LibraryScreen</Text>
+            <Text>Pantalla de Biblioteca</Text>
         </View>
     )
 }
