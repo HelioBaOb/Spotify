@@ -1,3 +1,6 @@
 Aquí vendran todos los extra:
 - Colores
+    Paleta de Colores Spotify
+    Verde #1DB954 
+    Gris #191414
 - Fuentes
