@@ -22,7 +22,7 @@ const PlaylistCard = (props) =>{
     )
 }
 
-export default SongCard;
+export default PlaylistCard;
 
 const styles = StyleSheet.create({
     card: {

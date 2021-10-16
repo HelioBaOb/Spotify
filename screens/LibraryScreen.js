@@ -3,12 +3,20 @@ import {StyleSheet, View, Text, FlatList} from "react-native";
 import { Dimensions } from 'react-native';
 import { PLAYLISTS } from '../dummy data/data';
 import PlaylistCard from '../components/PlaylistCard';
+import { AntDesign } from '@expo/vector-icons';
 
 
 const LibraryScreen = (props) =>{
     return(
         <View style={styles.container}>  
-            <Text>Pantalla de Biblioteca</Text>
+            <View style={styles.filters}>
+            <AntDesign name="arrowdown" size={14} color="white" />
+            <AntDesign name="arrowup" size={14} color="white" />
+            <Text style={styles.text}>Escuchado Recientemente</Text>
+            <View style={styles.appstoreIcon}>
+            <AntDesign name="appstore-o" size={16} color="white"/>
+            </View>
+            </View>
             <FlatList
             data={PLAYLISTS}
             showsVerticalScrollIndicator={false}
@@ -35,4 +43,17 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height * 0.92,
         width:'100%',
     },
+    filters: {
+        padding: 5,
+        flexDirection:'row',
+        width: Dimensions.get('window').height * 0.92,
+    },
+    text: {
+        fontSize: 14,
+        color: 'white',
+        marginLeft: 10,
+    },
+    appstoreIcon: {
+        marginLeft: Dimensions.get('window').height * 0.20,
+    }
 });
