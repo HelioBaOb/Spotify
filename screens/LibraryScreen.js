@@ -12,7 +12,7 @@ const LibraryScreen = (props) =>{
             <View style={styles.filters}>
             <AntDesign name="arrowdown" size={14} color="white" />
             <AntDesign name="arrowup" size={14} color="white" />
-            <Text style={styles.text}>Escuchado Recientemente</Text>
+            <Text style={styles.text}>Escuchados Recientemente</Text>
             <View style={styles.appstoreIcon}>
             <AntDesign name="appstore-o" size={16} color="white"/>
             </View>
