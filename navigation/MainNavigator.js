@@ -23,14 +23,20 @@ export const TabNavigator = () =>{
                     color: "white",
                 },
             }}
+            // screenOptions={{
+            //     headerShown: false
+            // }}
             >
                 <Tab.Screen name="Main" component={MainScreen} options={{
-                    tabBarIcon:({focused})=><Foundation name="home" size={24} color={focused?"white":"grey"} />
+                    headerShown: false,     
+                    tabBarIcon:({focused})=><Foundation name="home" size={24} color={focused?"white":"grey"}/>
                 }}/>
-                <Tab.Screen name="Search" component={SearchScreen} options={{
+                <Tab.Screen name="Search" component={SearchScreen} options={{ 
+                    headerShown: false,                
                     tabBarIcon:({focused})=><AntDesign name="search1" size={24} color={focused?"white":"grey"} />
                 }}/>
                 <Tab.Screen name="Library" component={LibraryScreen} options={{
+                    headerShown: false,     
                     tabBarIcon:({focused})=><MaterialCommunityIcons name="bookshelf" size={24} color={focused?"white":"grey"} />
                 }}/>
             </Tab.Navigator>
