@@ -1,21 +1,23 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Text} from "react-native";
+import {StyleSheet, View, Text, FlatList} from "react-native";
 import { Dimensions } from 'react-native';
-import SongCard from '../components/SongCard';
+import { PLAYLISTS } from '../dummy data/data';
+import PlaylistCard from '../components/PlaylistCard';
 
 
 const LibraryScreen = (props) =>{
     return(
         <View style={styles.container}>  
-            <View style={styles.listContainer}>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-            </View> 
+            <Text>Pantalla de Biblioteca</Text>
+            <FlatList
+            data={PLAYLISTS}
+            showsVerticalScrollIndicator={false}
+            keyExtractor={item => item.id.toString()}
+            renderItem={itemData => (
+                <PlaylistCard cardInfo={itemData.item} /*press={}*//>
+            )
+            }
+            />
         </View>
     )
 }

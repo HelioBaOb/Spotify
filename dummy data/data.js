@@ -1,4 +1,43 @@
-export const SPOTI =[
+export const PLAYLISTS =[
+    {
+        id: 1,
+        name:"Playlist de Helio",
+        imgUrl:'https://besthqwallpapers.com/Uploads/25-2-2021/157480/thumb2-the-flash-logo-4k-minimalism-red-background-creative.jpg',
+        duration: "39 min 26 seg",
+        creator: "Helio Barriga Obregon"
+    },
+    {
+        id: 2,
+        name:"Música Relax",
+        imgUrl:'https://media-cdn.tripadvisor.com/media/photo-s/14/f9/e4/e5/relax.jpg',
+        duration: "7 hrs 55 min",
+        creator: "Helio Barriga Obregon"
+    },
+    {
+        id: 3,
+        name:"Canciones Chidoris",
+        imgUrl:'https://i.scdn.co/image/ab6761610000e5eb8101d13bdd630b0889acd2fd',
+        duration: "5 hrs 29 min",
+        creator: "Helio Barriga Obregon"
+    },
+    {
+        id: 4,
+        name:"Los Monos Árticos",
+        imgUrl:'https://beyondvinyl.co.uk/wp-content/uploads/2020/04/arctic-monkeys-am.jpg',
+        duration: "1 hr 28 min",
+        creator: "Helio Barriga Obregon"
+    },
+    {
+        id: 5,
+        name:"La Playlist Mix",
+        imgUrl:'https://static.mytuner.mobi/media/tvos_radios/bbjG4U8gcs.png',
+        duration: "9 hrs 15 min",
+        creator: "Helio Barriga Obregon"
+    }
+
+]
+
+export const SONGS =[
     {
         id: 1,
         name:"Yonaguni",

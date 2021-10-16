@@ -3,17 +3,18 @@ import {StyleSheet, View, Text, Image, Dimensions} from "react-native";
 import TouchableComponent from "./UI/TouchableComponent";
 import Card from "./UI/Card";
 
-const SongCard = (props) =>{
+const PlaylistCard = (props) =>{
+
     return(
         <Card style={styles.card}>
             <TouchableComponent>
                 <View style={styles.infoContainer}>
                     <Image style={styles.image}
-                            source={{uri:"https://www.buscaletras.com/photos/albums/post-malone/max/stoney-deluxe.jpg"}}/>
+                            source={{uri:props.cardInfo.imgUrl}}/>
 
                     <View>
-                        <Text style={styles.titleText}> Go Flex </Text>
-                        <Text style={styles.descriptionText}> Playlist Deibi </Text>
+                        <Text style={styles.titleText}> {props.cardInfo.name} </Text>
+                        <Text style={styles.descriptionText}> De {props.cardInfo.creator} </Text>
                     </View>
                 </View>
             </TouchableComponent>
