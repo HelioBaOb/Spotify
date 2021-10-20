@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         width:'95%',
         marginHorizontal:'2.5%',
         backgroundColor:'#191414',
-        marginBottom: 15,
+        marginBottom: 10,
         overflow:'hidden',
         },
 });
