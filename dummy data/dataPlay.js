@@ -1,0 +1,42 @@
+export const SPOTIPLAY =[
+    {
+        idPlay: 1,
+        namePlay:"This is Mac Miller",
+        descriptionPlay:"Celebrating the life and music of Mac Miller",
+        autorPlay: "Spotify",
+        imgUrlPlay:'https://i.scdn.co/image/ab67706f00000003723228643ca262e4d71cae24',
+	      durationPlay: "4h 13m",
+    },
+    {
+        idPlay: 2,
+        namePlay:"Playlist de Helio",
+        descriptionPlay:"Celebrating the life and music of Mac Miller",
+        autorPlay: "Heliomenalvxd",
+        imgUrlPlay:'https://i.scdn.co/image/ab67706f00000003723228643ca262e4d71cae24',
+	      durationPplay: "3h 49m",
+    },
+    {
+        idPlay: 3,
+        namePlay:"Soft",
+        descriptionPlay:"Música",
+        autorPlay: "David Ruiz Lara",
+        imgUrlPlay:'https://cdns-images.dzcdn.net/images/cover/b96a3116af78b8c516f18ba367e36bc0/500x500.jpg',
+	      durationPplay: "21h 32m",
+    },
+    {
+        idPlay: 4,
+        namePlay:"agustoalaverga",
+        descriptionPlay:"pa' pasar el rato",
+        autorPlay: "Alexis Puerto",
+        imgUrlPlay:'https://i.pinimg.com/736x/ff/0d/0b/ff0d0b6ccdafa0f7818077a78af52615.jpg',
+	      durationPplay: "2h 31m",
+    },
+    {
+        idPlay: 5,
+        namePlay:"Star Wars Lofi HipHop",
+        descriptionPlay:"lofi chill playlist celebrating Star Wars",
+        autorPlay: "Chilled Panda",
+        imgUrlPlay:'https://steamuserimages-a.akamaihd.net/ugc/1638705743367141279/E0F5142714F86C00E413C08D8FC95159DD10D796/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true',
+	      durationPplay: "1h 24m",
+    },
+]
