@@ -1,16 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native'; 
-import { AntDesign } from '@expo/vector-icons';
-import { StackMain, TabNavigator } from './navigation/MainNavigator';
+import { StyleSheet } from 'react-native'; 
+import { StackMain } from './navigation/MainNavigator';
 import React from 'react';
+import { createStore, combineReducers, applyMiddleware} from 'redux';
+import ReduxThunk from 'redux-thunk';
+import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 
+const rootReducer = combineReducers({
+})
+const store = createStore(
+  rootReducer,
+  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(ReduxThunk)
+)
 
 export default function App() {
   return (
-        
-        <TabNavigator/>
-
+    <NavigationContainer>
+        <StackMain/>
+    </NavigationContainer>
   );
 }
 

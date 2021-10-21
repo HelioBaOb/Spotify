@@ -5,9 +5,13 @@ import Card from "./UI/Card";
 
 const PlaylistCard = (props) =>{
 
+    const openPlaylist = () =>{
+        props.navigation.navigate('PlaylistScreen',{cardInfo:props.cardInfo});
+    }
+
     return(
         <Card style={styles.card}>
-            <TouchableComponent>
+            <TouchableComponent onPress={openPlaylist}>
                 <View style={styles.infoContainer}>
                     <Image style={styles.image}
                             source={{uri:props.cardInfo.imgUrl}}/>

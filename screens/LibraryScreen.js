@@ -22,7 +22,7 @@ const LibraryScreen = (props) =>{
             showsVerticalScrollIndicator={false}
             keyExtractor={item => item.id.toString()}
             renderItem={itemData => (
-                <PlaylistCard cardInfo={itemData.item} /*press={}*//>
+                <PlaylistCard cardInfo={itemData.item} /*press={}*/ {...props}/>
             )
             }
             />

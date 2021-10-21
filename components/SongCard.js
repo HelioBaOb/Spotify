@@ -11,11 +11,11 @@ const SongCard = (props) =>{
             <TouchableComponent>
                 <View style={styles.infoContainer}>
                     <Image style={styles.image}
-                            source={{uri:"https://images.genius.com/573a07cba6e81c8bf69f279565093eca.1000x1000x1.png"}}/>
+                            source={{uri:props.cardInfo.imgUrl}}/>
 
                     <View>
-                        <Text style={styles.titleText}> Yonaguni </Text>
-                        <Text style={styles.descriptionText}>Bad bunny</Text>
+                        <Text style={styles.titleText}> {props.cardInfo.name} </Text>
+                        <Text style={styles.descriptionText}> {props.cardInfo.artist} </Text>
                     </View>
                     <View style={styles.icon}>
                         <Feather name="more-vertical" size={24} color="#D0C7C7" />

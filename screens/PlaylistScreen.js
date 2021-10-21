@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, View, Image, Text, FlatList} from "react-native";
 import { Dimensions } from 'react-native';
-import { SONGS } from '../dummy data/data';
+import { PLAYLISTS } from '../dummy data/data';
 import SongCard from '../components/SongCard';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign } from '@expo/vector-icons';
@@ -9,7 +9,7 @@ import { Feather } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons'; 
 import TouchableComponent from '../components/UI/TouchableComponent';
 
-const TestScreen = (props) =>{
+const PlaylistScreen = (props) =>{
     return(
             <View style={styles.container}>
                 <LinearGradient 
@@ -22,18 +22,18 @@ const TestScreen = (props) =>{
                 <View style={styles.header}>  
                     <View style={styles.imageContainer}>
                     <Image style={styles.playlistImage}
-                                    source={{uri:"https://images.genius.com/573a07cba6e81c8bf69f279565093eca.1000x1000x1.png"}}/>
+                                    source={{uri:props.route.params.cardInfo.imgUrl}}/>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text style={styles.titleText}>Rock/Pop español 2000</Text>
-                        <Text style={styles.descriptionText}>La musica no pasa de moda ni deja de ser anticuada.</Text>
+                        <Text style={styles.titleText}>{props.route.params.cardInfo.name}</Text>
+                        <Text style={styles.descriptionText}>{props.route.params.cardInfo.name}</Text>
                             <View style={styles.autorContainer}>
                                 
                             <Image style={styles.autorImage}
                                     source={{uri:"https://scontent.fmlm3-1.fna.fbcdn.net/v/t1.6435-9/116899667_2000069700127447_4153192373184958620_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=JcRqlY3GCbIAX_Kxp6I&_nc_ht=scontent.fmlm3-1.fna&oh=0635c62a60e4a835faee6872a28bdb53&oe=61911719"}}/>
-                                <Text style={styles.autorText}>Helio Barriga</Text>
+                                <Text style={styles.autorText}>{props.route.params.cardInfo.creator}</Text>
                             </View>
-                        <Text style={styles.descriptionText}>17 h 4 min</Text>
+                        <Text style={styles.descriptionText}>{props.route.params.cardInfo.duration}</Text>
                     </View>
 
                     <View style={styles.iconContainer}>
@@ -60,18 +60,22 @@ const TestScreen = (props) =>{
                     </View>
                 </View>
                 <View style={styles.listContainer}>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
-                    <SongCard></SongCard>
+                <FlatList
+                    data={props.route.params.cardInfo.songs}
+                    showsVerticalScrollIndicator={false}
+                    keyExtractor={item => item.id.toString()}
+                    renderItem={itemData => (
+                        <SongCard cardInfo={itemData.item}{...props}/>
+                    )
+                    }
+                    />
                 </View>
                 </LinearGradient>
             </View>
     )
 }
 
-export default TestScreen;
+export default PlaylistScreen;
 
 const styles = StyleSheet.create({
     container: {
