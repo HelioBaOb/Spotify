@@ -33,6 +33,41 @@ export const PLAYLISTS =[
         imgUrl:'https://static.mytuner.mobi/media/tvos_radios/bbjG4U8gcs.png',
         duration: "9 hrs 15 min",
         creator: "Helio Barriga Obregon"
+    },
+    {
+        id: 6,
+        name:"This is Mac Miller",
+        creator: "Spotify",
+        imgUrl:'https://i.scdn.co/image/ab67706f00000003723228643ca262e4d71cae24',
+	    duration: "4h 13m",
+    },
+    {
+        id: 7,
+        name:"Playlist de Helio",
+        creator: "Heliomenalvxd",
+        imgUrl:'https://i.scdn.co/image/ab67706f00000003723228643ca262e4d71cae24',
+	    duration: "3h 49m",
+    },
+    {
+        id: 8,
+        name:"Soft",
+        creator: "David Ruiz Lara",
+        imgUrl:'https://cdns-images.dzcdn.net/images/cover/b96a3116af78b8c516f18ba367e36bc0/500x500.jpg',
+	    duration: "21h 32m",
+    },
+    {
+        id: 9,
+        name:"agustoalaverga",
+        creator: "Alexis Puerto",
+        imgUrl:'https://i.pinimg.com/736x/ff/0d/0b/ff0d0b6ccdafa0f7818077a78af52615.jpg',
+	    duration: "2h 31m",
+    },
+    {
+        id: 10,
+        name:"Star Wars Lofi HipHop",
+        creator: "Chilled Panda",
+        imgUrl:'https://steamuserimages-a.akamaihd.net/ugc/1638705743367141279/E0F5142714F86C00E413C08D8FC95159DD10D796/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true',
+	    duration: "1h 24m",
     }
 
 ]
