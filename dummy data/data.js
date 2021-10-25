@@ -186,6 +186,56 @@ export const PLAYLISTS =[
         songs:[
             
         ]
-    }
+    },
+    {
+        id: 11,
+        name:"Rakanral 2.0",
+        creator: "David Ruiz Lara",
+        imgUrl:'https://i.scdn.co/image/ab67616d0000b27304db0e3bcd166c1d6cfd81f9',
+	    duration: "42h 58m",
+        songs:[
+            
+        ]
+    },
+    {
+        id: 12,
+        name:"Intrumental",
+        creator: "David Ruiz Lara",
+        imgUrl:'https://i.scdn.co/image/ab67616d0000b27359f76b3f04a9344363d143e5',
+	    duration: "3h 50m",
+        songs:[
+            
+        ]
+    },
+    {
+        id: 13,
+        name:"Electro",
+        creator: "David Ruiz Lara",
+        imgUrl:'https://i.scdn.co/image/ab67616d0000b273e14f11f796cef9f9a82691a7',
+	    duration: "11h 5m",
+        songs:[
+            
+        ]
+    },
+    {
+        id: 14,
+        name:"WOD",
+        creator: "David Ruiz Lara",
+        imgUrl:'https://i.scdn.co/image/ab67616d0000b273ffa830338e7bc9a8aaf44aac',
+	    duration: "6h 48m",
+        songs:[
+            
+        ]
+    },
+    {
+        id: 15,
+        name:"TRAP",
+        creator: "David Ruiz Lara",
+        imgUrl:'https://i.scdn.co/image/ab67616d0000b273988ede5e1276e758b5f9e577',
+	    duration: "10h 41m",
+        songs:[
+            
+        ]
+    },
 
 ]
