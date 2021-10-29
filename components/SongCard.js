@@ -9,17 +9,20 @@ const SongCard = (props) =>{
     return(
         <Card style={styles.card}>
             <TouchableComponent>
-                <View style={styles.infoContainer}>
-                    <Image style={styles.image}
-                            source={{uri:props.cardInfo.imgUrl}}/>
+                <View style={styles.cardContainer}>  
+                        <View style={styles.infoContainer}>
+                                <Image style={styles.image}
+                                        source={{uri:props.cardInfo.imgUrl}}/>
 
-                    <View>
-                        <Text style={styles.titleText}> {props.cardInfo.name} </Text>
-                        <Text style={styles.descriptionText}> {props.cardInfo.artist} </Text>
-                    </View>
-                    <View style={styles.icon}>
-                        <Feather name="more-vertical" size={24} color="#D0C7C7" />
-                    </View>
+                                <View>
+                                    <Text style={styles.titleText}> {props.cardInfo.name} </Text>
+                                    <Text style={styles.descriptionText}> {props.cardInfo.artist} </Text>
+                                </View>
+                        </View> 
+
+                        <View style={styles.iconContainer}>
+                                <Feather name="more-vertical" size={24} color="#D0C7C7" />
+                        </View>
                     
                 </View>
             </TouchableComponent>
@@ -31,7 +34,10 @@ export default SongCard;
 
 const styles = StyleSheet.create({
     card: {
-        height :Dimensions.get('window').height * 0.08,
+        height:Dimensions.get('window').height * 0.08,
+    },
+    cardContainer: {
+        flexDirection: 'row',
     },
     image: {
         margin: Dimensions.get('window').height * 0.005,
@@ -54,13 +60,12 @@ const styles = StyleSheet.create({
         color: '#D0C7C7'
     },
     infoContainer:{
-        height :Dimensions.get('window').height * 0.1,
-        width :Dimensions.get('window').height * 0.60,
-        flexDirection:'row',
+        width: '90%',
+        flexDirection: 'row',
     },
-    icon: {
+    iconContainer: {
         marginTop: 10,
-        marginLeft: '45%',
+        width: '10%',
         alignItems: 'center',
     }
 });

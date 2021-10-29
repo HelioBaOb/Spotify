@@ -15,7 +15,7 @@ const PlaylistScreen = (props) =>{
                 <LinearGradient 
                         colors={['#6B6B6B', '#191414']} 
                         start={{ x: 0, y: 0}} 
-                        end={{ x: 0, y: 0.54 }} 
+                        end={{ x: 0, y: 0.45 }} 
                         locations={[0, 1]} 
                         style={styles.linearGradient}>
 
@@ -37,26 +37,27 @@ const PlaylistScreen = (props) =>{
                     </View>
 
                     <View style={styles.iconContainer}>
-                        <TouchableComponent>
                             <View style={styles.icon}>
-                                <AntDesign name="hearto" size={24} color="#D0C7C7" />
+                                <TouchableComponent>
+                                    <AntDesign name="hearto" size={24} color="#D0C7C7" />
+                                </TouchableComponent>
                             </View>
-                        </TouchableComponent>
-                        <TouchableComponent>
                             <View style={styles.icon}>
-                                <EvilIcons name="arrow-down" size={34} color="#D0C7C7" />
+                                <TouchableComponent>
+                                    <EvilIcons name="arrow-down" size={34} color="#D0C7C7" />
+                                </TouchableComponent>
                             </View>
-                        </TouchableComponent>
-                        <TouchableComponent>
                             <View style={styles.icon}>
-                                <Feather name="more-vertical" size={24} color="#D0C7C7" />
+                                <TouchableComponent>
+                                    <Feather name="more-vertical" size={24} color="#D0C7C7" />
+                                </TouchableComponent>
                             </View>
-                        </TouchableComponent>
-                            <TouchableComponent>
-                                <View style={styles.playIcon}>
+
+                            <View style={styles.playIcon}>
+                                <TouchableComponent>
                                     <AntDesign name="play" size={50} color="#1DB954" />
-                                </View>
-                            </TouchableComponent>
+                                </TouchableComponent>
+                            </View>
                     </View>
                 </View>
                 <View style={styles.listContainer}>
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     linearGradient: {
-        height: Dimensions.get('window').height,
+        height: Dimensions.get('window').height * 1.1,
     },
     header: {
         marginBottom: 10,
@@ -135,6 +136,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     listContainer: {
+        height: Dimensions.get('window').height * 0.92,
         padding: 10,
         marginTop: 30
     }

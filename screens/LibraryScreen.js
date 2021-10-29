@@ -4,32 +4,53 @@ import { Dimensions } from 'react-native';
 import { PLAYLISTS } from '../dummy data/data';
 import PlaylistCard from '../components/PlaylistCard';
 import { AntDesign, FontAwesome5 } from '@expo/vector-icons';
+import TouchableComponent from '../components/UI/TouchableComponent';
 
 export const ListHeader = () => {
     return (
         <View style={styles.headerFooterStyle}>
-        <View style={styles.filters2}>
-        <View style={styles.filtersuser}>
-        <FontAwesome5 name="user-circle" size={24} color="white" />
-        </View>
-        <Text style={styles.textStyle}>
-            Tu biblioteca
-        </Text>
-        <AntDesign name="search1" size={24} color="white" />
-        <AntDesign name="plus" size={24} color="white" />
-        </View>
-        <View style={styles.filters}>
-            <AntDesign name="arrowdown" size={14} color="white" />
-            <AntDesign name="arrowup" size={14} color="white" />
-            <Text style={styles.text}>Escuchados Recientemente</Text>
-            <View style={styles.appstoreIcon}>
-            <AntDesign name="appstore-o" size={16} color="white"/>
+            <View style={styles.headerFilters}>
+                
+                    <View style={styles.filtersuser}>
+                        <TouchableComponent>
+                            <FontAwesome5 name="user-circle" size={30} color="white" />
+                        </TouchableComponent>
+                    </View>
+                    <Text style={styles.headerText}>
+                        Tu biblioteca
+                    </Text>
+                <View style={styles.headerIcons}>
+                    <View style={styles.icon}>
+                        <TouchableComponent>
+                            <AntDesign name="search1" size={24} color="white" />
+                        </TouchableComponent>
+                    </View>
+                    <View style={styles.icon}>
+                        <TouchableComponent>
+                            <AntDesign name="plus" size={24} color="white" />
+                        </TouchableComponent>
+                    </View>
+                </View>
             </View>
-            </View>
+
+                <View style={styles.filters}>
+                    <TouchableComponent>
+                        <View style={styles.arrows}>
+                            <AntDesign name="arrowdown" size={14} color="white" />
+                            <AntDesign name="arrowup" size={14} color="white" />
+                        </View>
+                    </TouchableComponent>
+                <Text style={styles.filterText}>Escuchados Recientemente</Text>
+                
+                <TouchableComponent>
+                    <View style={styles.appstoreIcon}>
+                        <AntDesign name="appstore-o" size={16} color="white"/>
+                    </View>
+                </TouchableComponent>
+                </View>
         </View>
-      
-    );
-  };
+        );
+    };
 
 const LibraryScreen = (props) =>{
     return(
@@ -54,7 +75,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 10,
-        // backgroundColor: '#191414',
         backgroundColor: '#191414'
     },
     listContainer:{
@@ -63,44 +83,48 @@ const styles = StyleSheet.create({
     },
     filters: {
         padding: 10,
-        marginTop: 85,
+        marginTop: 5,
         flexDirection:'row',
         width: Dimensions.get('window').height * 0.92,
     },
-    filters2: {
-        //padding: 30,
+    arrows: {
+        flexDirection:'row',
+    },
+    headerFilters: {
+        paddingTop: 15,
+        margin: 30,
+        alignItems: 'center',
         flexDirection:'row',
         width: Dimensions.get('window').height * 0.92,
+    },
+    headerIcons: {
+        paddingLeft: Dimensions.get('window').height * 0.11,
+        flexDirection:'row',
+    },
+    icon: {
+        marginLeft: 30,
     },
     filtersuser: {
-        marginLeft: 1,
-        marginTop: 18
+        right: 20,
     },
-    filterstitle: {
-        marginLeft: 1,
-        marginTop: 18
-    },
-    filtersicons: {
-        marginLeft: 1,
-        marginTop: 18
-    },
-    text: {
+    filterText: {
         fontSize: 14,
         color: 'white',
         marginLeft: 10,
     },
     appstoreIcon: {
-        marginLeft: Dimensions.get('window').height * 0.20,
+        marginLeft: Dimensions.get('window').height * 0.18,
     },
     headerFooterStyle: {
         width: '100%',
         height: 160,
         backgroundColor: '#191414',
-      },
-      textStyle: {
+    },
+    headerText: {
+        fontFamily: 'CircularStd-Black',
         textAlign: 'center',
         color: '#fff',
-        fontSize: 18,
+        fontSize: 19,
         padding: 7,
-      },
+    }
 });

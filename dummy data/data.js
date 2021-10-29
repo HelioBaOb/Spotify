@@ -26,12 +26,12 @@ export const PLAYLISTS =[
             },
             {
                 id: 3,
-                name:"Vive sin Drogas",
+                name:"Burying the Dead",
                 description:"descripcion",
-                imgUrl:'https://cdn.worldvectorlogo.com/logos/vive-sin-drogas-1.svg',
-                duration: "1 min 37 seg",
-                artist: "New Four",
-                lyrics: "Desde el día que naciste, comenzaste a crecer Muy atento jugabas y pudiste aprender A distinguir los colores y formas En la vida se gana cuando entiendes bien Las drogas confunden y te hacen creer Que te sientes contento y que todo está bien No es cierto No hagas caso, no es cierto La salida está en frente, pero no puedes ver Porque lo que aprendiste lo echaste a perder Vive sin drogas Yo sé que eres chiquito y que sabes ver Que no todas las cosas se pueden creer Si te ofrecen drogas, te van a decir Que se siente bien padre, que te vas a reír No es cierto No hagas caso, no es cierto No es cierto No hagas caso, no es cierto",
+                imgUrl:'https://i.scdn.co/image/ab67616d00001e0259f76b3f04a9344363d143e5',
+                duration: "2 min 16 seg",
+                artist: "Kevin Kiner",
+                lyrics: "Instrumental",
             },
             {
                 id: 4,
