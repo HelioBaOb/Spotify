@@ -114,7 +114,46 @@ export const PLAYLISTS =[
         duration: "5 hrs 29 min",
         creator: "Helio Barriga Obregon",
         songs:[
-
+          {
+            id: 1,
+            name:"Legends Never Die",
+            imgUrl:'https://cdns-images.dzcdn.net/images/cover/bcefba20509b85c1ce13ab09cff79037/500x500.jpg',
+            duration: "3 min 55 seg",
+            artist: "League of Legends",
+            lyrics: "Legends never die When the world is calling you Can you hear them screaming out your name? Legends never die They become a part of you Every time you bleed for reaching greatness Relentless you survive They never lose hope when everything's cold And the fighting's near It's deep in their bones, they'll run into smoke When the fire is fierce Oh, pick yourself up, 'cause",
+          },
+          {
+            id: 2,
+            name:"RISE",
+            imgUrl:'https://cdns-images.dzcdn.net/images/cover/4349e2eedfe96be5c76b5ad7fa13727f/500x500.jpg',
+            duration: "3 min 12 seg",
+            artist: "League of Legends",
+            lyrics: "Welcome to the wild, no heroes and villains Welcome to the war, we've only begun, so Pick up your weapon and face it There's blood on the crown, go and take it You get one shot to make it out alive, so Higher and higher you chase it It's deep in your bones, go and take it This is your moment, now is your time, so Prove yourself and RISE, RISE Make 'em remember you RISE Push through hell and RISE, RISE They will remember you RISE",
+          },
+          {
+            id: 3,
+            name:"Warriors",
+            imgUrl:'https://lastfm.freetls.fastly.net/i/u/770x0/aed5e019e5f1419ec199a6f1ec658983.jpg',
+            duration: "3 min 24 seg",
+            artist: "League of Legends",
+            lyrics: "As a child you would wait And watch from far away But you always knew that you'd be the one That work while they all play In youth you'd lay Awake at night and scheme Of all the things that you would change But it was just a dream! Here we are, don't turn away now, We are the warriors that built this town Here we are, don't turn away now We are the warriors that built this town From dust.",
+          },
+          {
+            id: 4,
+            name:"Phoenix",
+            imgUrl:'https://cdns-images.dzcdn.net/images/cover/45eecedfdf3496b8bb31831ea0e93a30/500x500.jpg',
+            duration: "3 min 17 seg",
+            artist: "League of Legends",
+            lyrics: "What are you willing to lose? You cover your wounds, but underneath them A million voices in your head that whisper, Stop, now Another twist of the knife, turn of the screws It's all in your mind and it's fighting you Arm yourself, a storm is coming Well, kid, what you gonna do now? It's your reflection looking back to pull you down So are you gonna die today or make it out alive? You gotta conquer the monster in your head and then you'll fly Fly, phoenix, fly It's time for a new empire Go bury your demons then tear down the ceiling Phoenix, fly",
+          },
+          {
+            id: 5,
+            name:"Take Over",
+            imgUrl:'https://direct.rhapsody.com/imageserver/images/alb.509670808/500x500.jpg',
+            duration: "3 min 32 seg",
+            artist: "League of Legends",
+            lyrics: "We at the top again, now what? Heavy lay the crown, but Count us Higher than the mountain And we be up here for the long run Strap in for a long one We got everybody on one Now you're coming at the king so you better not miss And we only get stronger With everything I carry up on my back, you should paint it up with a target Why would you dare me to do it again? Come get your spoiler up ahead",
+          },
         ]
     },
     {
@@ -173,7 +212,38 @@ export const PLAYLISTS =[
         duration: "9 hrs 15 min",
         creator: "Helio Barriga Obregon",
         songs:[
-
+          {
+            id: 2,
+            name:"Contra La Pared",
+            imgUrl:'https://www.oxigeno.fm/wp-content/uploads/2019/03/sean-y-balvin.png',
+            duration: "3 min 44 seg",
+            artist: "J Balvin",
+            lyrics: "Sp 'longside J Balvin, men El negocio socio De día y de noche me llama (Night and day, leggo', biri-bam-bam-bam) Que quiere de nuevo en mi cama (Latino gang, Want inna me bed, biri-bam-bam) No fue suficiente una vez (Sean da' Paul, uh-yeah, bam-bam-bam) Ahora de día y de noche reclama (That was she said, biri-bam, ¡wuh!) Well in come the ting dem call chicks, it's for kicks and we don't play games Straight business, baby girl Tainy pon the track Hear what mi sayin' Balvin, tell 'em again (Trá)",
+          },
+          {
+            id: 3,
+            name:"El Farsante",
+            imgUrl:'https://cdns-images.dzcdn.net/images/cover/6145aa97e61ec6c8f701f570f4701741/350x350.jpg',
+            duration: "3 min 53 seg",
+            artist: "Ozuna",
+            lyrics: "Extraño tu aroma en la cama De ese que dejas cuando entras y sales Dónde quedaron los besos y todos los planes No sé si vivir o morir Me encuentro en un limbo desde que te fuiste de aquí Eres la única persona que yo quiero que se venga encima de mí Mi libertad no la quiero Tampoco la vida e' soltero Yo lo que quiero es que quieras lo mismo que todos queremos Tener una cuenta de banco con dígitos y muchos ceros Hacer el amor a diario y de paso gastar el dinero",
+          },
+          {
+            id: 4,
+            name:"Te Boté - Remix",
+            imgUrl:'https://heabbi.com/wp-content/uploads/2018/04/Nio-Garcia-Ft.-Casper-Magico-Darell-Nicky-Jam-Ozuna-Te-Bote-Remix.jpg',
+            duration: "6 min 57 seg",
+            artist: "Ozuna",
+            lyrics: "Este es el verdadero remix, baby  Paso muchas noches pensándote Yo no sé ni cómo, ni cuándo fue Pero solo sé que yo recordé Cómo te lo hacía yo aquella vez Y yo no puedo seguir solo, pero sé Que te boté  De mi vida te boté, y te boté Te di banda y te solté, yo te solté Pa'l carajo usted se fue, y usted se fue De mi vida te boté, yo te boté, yeh-yeh, mami",
+          },
+          {
+            id: 5,
+            name:"Criminal",
+            imgUrl:'https://cdns-images.dzcdn.net/images/cover/122cd03379bff4566c5c39628e945393/500x500.jpg',
+            duration: "3 min 51 seg",
+            artist: "Ozuna",
+            lyrics: "Uh oh oh oh El negrito ojos claros Ozuna Miento Si te digo que en ti no ando pensando Quisiera saber lo que estás haciendo Te llamo pero me sale ocupado, oh Tú me robaste el corazón como un criminal Bebé yo no puedo negarlo Esto que siento por ti no puede ser legal, ah",
+          },
         ]
     },
     {
@@ -232,7 +302,46 @@ export const PLAYLISTS =[
         imgUrl:'https://i.scdn.co/image/ab67706f00000003723228643ca262e4d71cae24',
 	    duration: "3h 49m",
         songs:[
-
+          {
+            id: 1,
+            name:"This is Gospel",
+            imgUrl:'https://img.discogs.com/ON4dhD6b5gg3yNLhUKHw163jnGo=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-13125545-1548511063-7654.jpeg.jpg',
+            duration: "3 min 7 seg",
+            artist: "Panic! At The Disco",
+            lyrics: "This is Gospel for the fallen ones Locked away in permanent slumber Assembling their philosophies From pieces of broken memories Oh Woah-oh (This is the beat of my heart This is the beat of my heart) Oh Woah-oh (This is the beat of my heart This is the beat of my heart) The gnashing teeth and criminal tounges Conspire against the odds But they haven't seen the best of us yet",
+          },
+          {
+            id: 2,
+            name:"Leave Me Alone",
+            imgUrl:'https://i.scdn.co/image/ab67616d0000b2736ee1f56d217811025c5b90de',
+            duration: "3 min 35 seg",
+            artist: "I DON'T KNOW HOW BUT THE FOUND ME",
+            lyrics: "Big shot, so what? Do you wanna pretend? You took the money But the money couldn't buy a friend Now I want you to leave me alone They say the devil that you know Is better than the devil that you don't Oh, you're a big shot here, but nobody else knows Now I want you to leave me alone Blind spot, take your best shot Lucky me Go fly a kite until you're tangled in the hanging tree",
+          },
+          {
+            id: 3,
+            name:"Crush",
+            imgUrl:'https://img.discogs.com/CXi6jMz5bgoOgqzPt2g03WLC1KE=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-13145999-1548865753-7553.jpeg.jpg',
+            duration: "3 min 35 seg",
+            artist: "Tessa Violet",
+            lyrics: "Uh, alright I can't focus on what needs to get done I'm on notice hoping that you don't run, ah You think I'm tepid but I'm misdiagnosed 'Cause I'm a stalker I seen all of your posts, ah-ah And I'm just tryna play it cool now But that's not what I wanna do now And I'm not tryna be with you now, you now Mhm You make it difficult to not overthink",
+          },
+          {
+            id: 4,
+            name:"If You Want Blood (You've got it)",
+            imgUrl:'https://m.media-amazon.com/images/I/71vsHNHr-KL._SL1500_.jpg',
+            duration: "4 min 34 seg",
+            artist: "AC/DC",
+            lyrics: "It's criminal There ought to be a law Criminal There ought to be a whole lot more You get nothin' for nothin' Tell me who can you trust We got what you want And you got the lust If you want blood, you got it If you want blood, you got it Blood on the streets Blood on the rocks Blood in the gutter Every last drop You want blood You got it",
+          },
+          {
+            id: 5,
+            name:"18",
+            imgUrl:'https://i.scdn.co/image/ab67616d00001e02e626d8740c283d5aaed3141c',
+            duration: "2 min 36 seg",
+            artist: "Anarbor",
+            lyrics: "Eighteen, crazy Pulled up in your daddy's car You wanna move in with me Guess we're off to a heavy start Should've seen this coming from a mile away Eighteen, crazy I know what you want from me I know what you want from me",
+          },
         ]
     },
     {
@@ -438,7 +547,46 @@ export const PLAYLISTS =[
         imgUrl:'https://i.scdn.co/image/ab67616d0000b27359f76b3f04a9344363d143e5',
 	    duration: "3h 50m",
         songs:[
-            
+          {
+            id: 1,
+            name:"Burying the Dead",
+            imgUrl:'https://images-na.ssl-images-amazon.com/images/I/81qaoCLTt3L._AC_UL600_SR600,600_.jpg',
+            duration: "2 min 16 seg",
+            artist: "Kevin Kiner",
+            lyrics: "---",
+          },
+          {
+            id: 2,
+            name:"Neighborhood",
+            imgUrl:'https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/64/7e/f6/647ef6d1-d035-0da3-20a6-3f7a468291de/86728da5-d8ba-4b68-88eb-b585afebe664.jpg/400x400bb.jpg',
+            duration: "3 min 11 seg",
+            artist: "Sans Souci",
+            lyrics: "---",
+          },
+          {
+            id: 3,
+            name:"Flowers",
+            imgUrl:'https://f4.bcbits.com/img/a0626843871_10.jpg',
+            duration: "3 min 7 seg",
+            artist: "The Deli",
+            lyrics: "---",
+          },
+          {
+            id: 4,
+            name:"Sa Riera",
+            imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdypTKO_yPo0eYn2ATp6dePz1sPSMZH9Qf0A&usqp=CAU',
+            duration: "3 min 21 seg",
+            artist: "TRO",
+            lyrics: "I saw a white dog laying on my bed I saw a white cat beside you Will you remember me? Will you remember me? I'm getting old but I'll be gone But 'til the day that I'll be There's a lot I know you'll never see But when you do remember me? Feeling startled, losing everything Feeling startled",
+          },
+          {
+            id: 5,
+            name:"Strad",
+            imgUrl:'https://f4.bcbits.com/img/a1112985681_10.jpg',
+            duration: "3 min 18 seg",
+            artist: "C418",
+            lyrics: "---",
+          },
         ]
     },
     {
@@ -448,7 +596,46 @@ export const PLAYLISTS =[
         imgUrl:'https://i.scdn.co/image/ab67616d0000b273e14f11f796cef9f9a82691a7',
 	    duration: "11h 5m",
         songs:[
-            
+          {
+            id: 1,
+            name:"Wake Me Up",
+            imgUrl:'https://img.discogs.com/yp3q3ojcsuQ4RRSZsywuRGW8m9M=/fit-in/600x522/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4730632-1373680607-7059.jpeg.jpg',
+            duration: "4 min 7 seg",
+            artist: "Avicii",
+            lyrics: "Feeling my way through the darkness Guided by a beating heart I can't tell where the journey will end But I know where to start They tell me I'm too young to understand They say I'm caught up in a dream Well life will pass me by if I don't open up my eyes Well that's fine by me So wake me up when it's all over When I'm wiser and I'm older All this time I was finding myself, and I Didn't know I was lost",
+          },
+          {
+            id: 2,
+            name:"Hey Brother",
+            imgUrl:'https://m.media-amazon.com/images/I/61RmQiEH0GL._SL1417_.jpg',
+            duration: "4 min 14 seg",
+            artist: "Avicii",
+            lyrics: "Hey brother There's an endless road to rediscover Hey sister Know that water's sweet but blood is thicker Oh, if the sky comes falling down For you There's nothing in this world I wouldn't do Hey brother Do you still believe in one another? Hey sister Do you still believe in love? I wonder",
+          },
+          {
+            id: 3,
+            name:"Broken Arrows",
+            imgUrl:'https://www.alexurbanpop.com/wp-content/uploads/2015/11/Avicii-Broken-Arrows.jpg',
+            duration: "3 min 52 seg",
+            artist: "Avicii",
+            lyrics: "You stripped your love down to the wire Fire shy and cold alone outside You stripped it right down to the wire But I see you behind those tired eyes Now as you wade through shadows that live in your heart You'll find the light that leads home Cause I see you for you and your beautiful scars So take my hand, don't let go",
+          },
+          {
+            id: 4,
+            name:"Trouble",
+            imgUrl:'https://m.media-amazon.com/images/I/714s7lzZmuL._SL1500_.jpg',
+            duration: "2 min 51 seg",
+            artist: "Avicii",
+            lyrics: "I've been a beggar and I've been a king I've been a loner and I've won the reign Losing myself just to find me again I'm a million miles smarter, but I ain't learnt a thing I've been a teacher and a student of hurt I've kept my word for whatever that's worth Never been last, but I've never been first Oh I may not be the best, but I'm far from the worst Oh I may not be the best, but I'm far from the worst",
+          },
+          {
+            id: 5,
+            name:"Addicted to You",
+            imgUrl:'https://img.discogs.com/DlKiDOCuZgvKGh9HUSr1HlbkW-Y=/fit-in/500x500/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5483433-1394536345-4734.jpeg.jpg',
+            duration: "2 min 27 seg",
+            artist: "Avicii",
+            lyrics: "I don't know just how it happened I let down my guard Swore I'd never fall in love again But I fell hard Guess I should have seen it coming Caught me by surprise Wasn't looking where I was going I fell into your eyes You came into my crazy world Like a cool and cleansing wave Before I, I knew what hit me, baby You were flowing through my veins",
+          },
         ]
     },
     {
@@ -458,7 +645,46 @@ export const PLAYLISTS =[
         imgUrl:'https://i.scdn.co/image/ab67616d0000b273ffa830338e7bc9a8aaf44aac',
 	    duration: "6h 48m",
         songs:[
-            
+          {
+            id: 1,
+            name:"Living My Best Life",
+            imgUrl:'https://images-na.ssl-images-amazon.com/images/I/51glUemBLHL._SY445_SX342_QL70_ML2_.jpg',
+            duration: "2 min 46 seg",
+            artist: "Paper Kings",
+            lyrics: "I got ish to do Flying through the sky in my parachute Dancing on the couch like I'm Tommy Cruise On a one man mission tryin' to see it through yeah I got the password, yeah I finally got the password Added up the numbers now the math works I got the way to make the path work All these lights turning from red to green Timing is everything, and it feels so good to shine Go and get it like!  Ay ya ya ya ya ya ya ya I'm living my best life, living my, living my best life So come and get it like Ay ya ya ya ya ya ya ya I'm living my best life, living my, living my best life",
+          },
+          {
+            id: 2,
+            name:"Fire On Up",
+            imgUrl:'https://images-na.ssl-images-amazon.com/images/I/51glUemBLHL._SY445_SX342_QL70_ML2_.jpg',
+            duration: "3 min 9 seg",
+            artist: "Paper Kings",
+            lyrics: "I'll be that silver, silver Lining to the story If you thought that I Would turn and run Then y'all don't know me May my fears rest in peace 'Cause that's the old me Got this taste on my tongue I crave the glory",
+          },
+          {
+            id: 3,
+            name:"Mic Drop",
+            imgUrl:'https://m.media-amazon.com/images/I/716P+pP7sfL._SS500_.jpg',
+            duration: "3 min 30 seg",
+            artist: "Manic Drive",
+            lyrics: "Oh, make way for the crew Bust down that door Turning heads as they break their necks You know Oh, all eyes on us And your jaw bone hits the floor Hello, I don't think we've ever met before We them boys from the six (mh-hmm) Watch it as we drop it like this (hummm)",
+          },
+          {
+            id: 4,
+            name:"Army",
+            imgUrl:'https://cdns-images.dzcdn.net/images/cover/729df8dabcc8929e079857164817891a/350x350.jpg',
+            duration: "3 min 46 seg",
+            artist: "Zyde Wolf",
+            lyrics: "I hear the echo out there on the street It's rising up just like a fever dream Cuts like a dagger when I try to breathe The engine's cranking on your war machine You think you got me but you're in too deep You dropped your match into the gasoline",
+          },
+          {
+            id: 5,
+            name:"Gladiator",
+            imgUrl:'https://lastfm.freetls.fastly.net/i/u/770x0/16c9c5523e1f33351b8538b746b28c9c.jpg',
+            duration: "3 min 8 seg",
+            artist: "Zyde Wolf",
+            lyrics: "Let me back it up to the start of the climb Faced with an army of vipers and lions I had to keep on reaching up 'cause it was my time To tear down the kingdom and call out the liars Got a jail on my heart from the pessimists Got those nails in my mouth for impressionists Spent too much money on a therapist Couldn't fix me, I accepted it",
+          },
         ]
     },
     {
@@ -468,7 +694,46 @@ export const PLAYLISTS =[
         imgUrl:'https://i.scdn.co/image/ab67616d0000b273988ede5e1276e758b5f9e577',
 	    duration: "10h 41m",
         songs:[
-            
+          {
+            id: 1,
+            name:"Safaera",
+            imgUrl:'https://i.pinimg.com/564x/05/1c/b9/051cb92fd7b53a6e450b1f6891622c57.jpg',
+            duration: "4 min 55seg",
+            artist: "Bad Bunny",
+            lyrics: "Bla, bla, bla, bla, bla, bla y, yo, yo-yo, yo-yo, yo-yo Yo, (la-la-la-la-la-la-la) blow, blow (la-la-la-la-la-la-la) Diablo', qué safaera' Tú tiene' un culo cabrón Cualquier cosa que te pongas rompes la carretera (la-la-la-la-la) Aight, muévelo, muévelo, muévelo, muévelo (la-la-la-la-la-la-la) Qué safaera' (la-la-la-la-la) Tú tiene' un culo cabrón Cualquier cosa que te pongas rompes la carretera Aight, (tra) muévelo, muévelo, muévelo, muévelo",
+          },
+          {
+            id: 2,
+            name:"Kool Aid & Frozen Pizza",
+            imgUrl:'https://www.mor.bo/wp-content/uploads/2020/05/kids.jpg',
+            duration: "2 min 38 seg",
+            artist: "Mac Miller",
+            lyrics: "Kids Hey Kool-Aid and frozen pizza It's a work of art, I ain't talking Mona Lisa Dream of rocking crowds, see me filling up arenas This weed got me laughing like a damn hyena (ha) Yeah, I live a life pretty similar to yours Used to go to school, hang with friends and play sports Every single summer taking trips to the shore And that was all gravy but I knew I wanted more",
+          },
+          {
+            id: 3,
+            name:"Warriors",
+            imgUrl:'https://lastfm.freetls.fastly.net/i/u/770x0/aed5e019e5f1419ec199a6f1ec658983.jpg',
+            duration: "3 min 24 seg",
+            artist: "League of Legends",
+            lyrics: "As a child you would wait And watch from far away But you always knew that you'd be the one That work while they all play In youth you'd lay Awake at night and scheme Of all the things that you would change But it was just a dream! Here we are, don't turn away now, We are the warriors that built this town Here we are, don't turn away now We are the warriors that built this town From dust.",
+          },
+          {
+            id: 4,
+            name:"I Bet You Look Good on the Dancefloor",
+            imgUrl:'https://www.nacionrock.com/wp-content/uploads/arctic.jpg',
+            duration: "2 min 54 seg",
+            artist: "Arctic Monkeys",
+            lyrics: "Stop making the eyes at me I'll stop making the eyes at you What it is that surprises me Is that I don't really want you to And your shoulders are frozen (cold as the night) Oh, but you're an explosion (you're dynamite) Your name isn't Rio, but I don't care for sand And lighting the fuse might result in a bang, b-b-bang-oh",
+          },
+          {
+            id: 5,
+            name:"Oceans",
+            imgUrl:'https://img.discogs.com/obDk-GqUX2h_B5fXMhgWoZA-95A=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-12922991-1544606338-6439.jpeg.jpg',
+            duration: "3 min 36 seg",
+            artist: "Seafret",
+            lyrics: "I want you Yeah I want you And nothing comes close To the way that I need you I wish I can feel your skin And I want you From somewhere within It feels like there's oceans Between me and you once again We hide our emotions Under the surface and tryin' to pretend But it feels like there's oceans Between you and me",
+          },
         ]
     },
 
