@@ -8,6 +8,7 @@ import MainScreen from '../screens/MainScreen';
 import LibraryScreen from '../screens/LibraryScreen';
 import SearchScreen from '../screens/SearchScreen';
 import PlaylistScreen from '../screens/PlaylistScreen';
+import CustomModal from '../components/CustomModal';
 
 const Tab = createBottomTabNavigator();
 

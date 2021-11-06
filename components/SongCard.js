@@ -3,12 +3,22 @@ import {StyleSheet, View, Text, Image, Dimensions} from "react-native";
 import TouchableComponent from "./UI/TouchableComponent";
 import Card from "./UI/Card";
 import { Feather } from '@expo/vector-icons';
+import {useDispatch} from "react-redux";
+import * as currentSongActions from "../store/actions/currentSongActions";
 
 const SongCard = (props) =>{
-
+    const dispatch = useDispatch();
+    const setCurrentSong = () =>{
+        try{
+            dispatch(currentSongActions.setSong(props.cardInfo))
+        }catch(e){
+            console.log(e)
+        }
+    }
+    
     return(
         <Card style={styles.card}>
-            <TouchableComponent>
+            <TouchableComponent onPress={setCurrentSong}>
                 <View style={styles.cardContainer}>  
                         <View style={styles.infoContainer}>
                                 <Image style={styles.image}

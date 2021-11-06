@@ -9,7 +9,12 @@ import ReduxThunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 
+import authReducer from "./store/reducers/authReducer";
+import currentSongReducer from "./store/reducers/currentSongReducer";
+
 const rootReducer = combineReducers({
+  currentSong: currentSongReducer,
+  auth: authReducer
 })
 const store = createStore(
   rootReducer,
@@ -45,9 +50,11 @@ export default function App() {
   }
 
   return (
-    <NavigationContainer>
-        <StackMain/>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+          <StackMain/>
+      </NavigationContainer>
+    </Provider>
   );
 }
 

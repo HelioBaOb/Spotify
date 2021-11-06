@@ -1,28 +1,41 @@
 import React, {useState} from 'react';
-import {StyleSheet,  View, Image, Text} from "react-native";
+import {StyleSheet,  View, Image, Text, ScrollView, Pressable} from "react-native";
 import { Dimensions } from 'react-native';
 import MiniPlaylistCard from '../components/MiniPlaylistCard';
+import { PLAYLISTS } from '../dummy data/data';
 import Carousel from 'react-native-snap-carousel';
 import CarouselCard from '../components/CarouselCard';
+import SongPlayer from '../components/SongPlayer'
+import CustomModal from '../components/CustomModal';
+import {useSelector} from "react-redux";
 
 const MainScreen = (props) =>{
 
+    const cardInfo = useSelector(state => state.currentSong.cardInfo);
+    const [visibility, setVisibility] = useState(false)
+
+    const modalShown = () =>{
+        setVisibility(true);
+    }
+
     return(
         <View style={styles.container}>
+            {cardInfo && <CustomModal setVisibility={setVisibility} visibility={visibility}></CustomModal> }
+            <ScrollView style={styles.scrollView}>
             <View style={styles.headerContainer}>
                 <Text style={styles.titleText}>Buenas Tardes</Text>
                 <View style={styles.playlistContainer}>
                     <View style={styles.cardContainer}>
-                        <MiniPlaylistCard>Tus me gusta</MiniPlaylistCard>
-                        <MiniPlaylistCard>Descubrimiento</MiniPlaylistCard>
+                        <MiniPlaylistCard cardInfo={PLAYLISTS[0]} {...props}>Tus me gusta</MiniPlaylistCard>
+                        <MiniPlaylistCard cardInfo={PLAYLISTS[5]} {...props}>Descubrimiento</MiniPlaylistCard>
                     </View>
                     <View style={styles.cardContainer}>
-                        <MiniPlaylistCard>agustoAlaberga</MiniPlaylistCard>
-                        <MiniPlaylistCard>Playlist de Helio</MiniPlaylistCard>
+                        <MiniPlaylistCard cardInfo={PLAYLISTS[8]} {...props}>agustoalaverga</MiniPlaylistCard>
+                        <MiniPlaylistCard cardInfo={PLAYLISTS[7]} {...props}>Soft</MiniPlaylistCard>
                     </View>
                     <View style={styles.cardContainer}>
-                        <MiniPlaylistCard>Música Relax</MiniPlaylistCard>
-                        <MiniPlaylistCard>Monos Árticos</MiniPlaylistCard>
+                        <MiniPlaylistCard cardInfo={PLAYLISTS[1]} {...props}>Música Relax</MiniPlaylistCard>
+                        <MiniPlaylistCard cardInfo={PLAYLISTS[3]} {...props}>Los Monos Árticos</MiniPlaylistCard>
                     </View>
                 </View>
             </View>
@@ -49,9 +62,12 @@ const MainScreen = (props) =>{
                 </View>
 
             </View>
-
-            
-            
+            </ScrollView>
+            {cardInfo &&
+                <Pressable onPress={modalShown}>
+                    <SongPlayer cardInfo={cardInfo}/>
+                </Pressable>
+            }
         </View>
     )
 }

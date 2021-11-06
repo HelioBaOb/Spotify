@@ -5,13 +5,13 @@ import Card from "./UI/Card";
 
 const MiniPlaylistCard = (props) =>{
 
-    // const openPlaylist = () =>{
-    //     props.navigation.navigate('PlaylistScreen',{cardInfo:props.cardInfo});
-    // }
+    const openPlaylist = () =>{
+        props.navigation.navigate('PlaylistScreen',{cardInfo:props.cardInfo});
+    }
 
     return(
         <Card style={styles.card}>
-            <TouchableComponent>
+            <TouchableComponent onPress={openPlaylist}>
                 <View style={styles.infoContainer}>
                     <Image style={styles.image}
                             source={{uri:'https://misc.scdn.co/liked-songs/liked-songs-300.png'}}/>

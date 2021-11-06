@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Text, FlatList} from "react-native";
+import {StyleSheet, View, Text, FlatList, Pressable} from "react-native";
 import { Dimensions } from 'react-native';
 import { PLAYLISTS } from '../dummy data/data';
 import PlaylistCard from '../components/PlaylistCard';
 import { AntDesign, FontAwesome5 } from '@expo/vector-icons';
 import TouchableComponent from '../components/UI/TouchableComponent';
+import SongPlayer from '../components/SongPlayer'
+import CustomModal from '../components/CustomModal';
+import {useSelector} from "react-redux";
 
 export const ListHeader = () => {
+
     return (
         <View style={styles.headerFooterStyle}>
             <View style={styles.headerFilters}>
@@ -53,18 +57,33 @@ export const ListHeader = () => {
     };
 
 const LibraryScreen = (props) =>{
+
+    const cardInfo = useSelector(state => state.currentSong.cardInfo);
+    const [visibility, setVisibility] = useState(false)
+
+    const modalShown = () =>{
+        setVisibility(true);
+    }
+
     return(
-        <View style={styles.container}>  
-            <FlatList
-            ListHeaderComponent={ListHeader}
-            data={PLAYLISTS}
-            showsVerticalScrollIndicator={false}
-            keyExtractor={item => item.id.toString()}
-            renderItem={itemData => (
-                <PlaylistCard cardInfo={itemData.item} /*press={}*/ {...props}/>
-            )
-            }
-            />
+        <View style={styles.container}> 
+            {cardInfo && <CustomModal setVisibility={setVisibility} visibility={visibility}></CustomModal> }
+            <ListHeader/>
+                <FlatList
+                // ListHeaderComponent={ListHeader}
+                data={PLAYLISTS}
+                showsVerticalScrollIndicator={false}
+                keyExtractor={item => item.id.toString()}
+                renderItem={itemData => (
+                    <PlaylistCard cardInfo={itemData.item} /*press={}*/ {...props}/>
+                )
+                }
+                />
+                {cardInfo &&
+                    <Pressable onPress={modalShown}>
+                        <SongPlayer cardInfo={cardInfo}/>
+                    </Pressable>
+                }
         </View>
     )
 }
@@ -121,7 +140,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#191414',
     },
     headerText: {
-        fontFamily: 'CircularStd-Black',
+        fontFamily: 'circular-bold',
         textAlign: 'center',
         color: '#fff',
         fontSize: 19,

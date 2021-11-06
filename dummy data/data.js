@@ -1,7 +1,7 @@
 export const PLAYLISTS =[
     {
         id: 1,
-        name:"Playlist de Helio",
+        name:"Tus me gusta",
         imgUrl:'https://besthqwallpapers.com/Uploads/25-2-2021/157480/thumb2-the-flash-logo-4k-minimalism-red-background-creative.jpg',
         duration: "39 min 26 seg",
         creator: "Helio Barriga Obregon",
@@ -692,7 +692,7 @@ export const PLAYLISTS =[
         name:"TRAP",
         creator: "David Ruiz Lara",
         imgUrl:'https://i.scdn.co/image/ab67616d0000b273988ede5e1276e758b5f9e577',
-	    duration: "10h 41m",
+	      duration: "10h 41m",
         songs:[
           {
             id: 1,

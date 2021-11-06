@@ -12,14 +12,15 @@ return `#${randomColor}`;
 
 const GenreCard = (props) =>{
 
-    // const openPlaylist = () =>{
-    //     props.navigation.navigate('PlaylistScreen',{cardInfo:props.cardInfo});
-    // }
+    console.log(props.cardInfo)
 
+    const openPlaylist = () =>{
+        props.navigation.navigate('PlaylistScreen',{cardInfo:props.cardInfo});
+    }
 
     return(
-    <TouchableComponent>
-        <Card style={styles.card}>
+    <TouchableComponent onPress={openPlaylist}>
+        <Card style={[styles.card, {backgroundColor:`${generateColor()}`}]}>
                 <Text style={styles.title}>{props.children}</Text>
         </Card>
     </TouchableComponent>
@@ -30,7 +31,6 @@ export default GenreCard;
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: generateColor(),
         width: Dimensions.get('window').height * 0.24,
         height: Dimensions.get('window').height * 0.12,
         borderRadius: 8,

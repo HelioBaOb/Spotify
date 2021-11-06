@@ -1,16 +1,26 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, TextInput, Dimensions, Text} from "react-native";
-import TouchableComponent from '../components/UI/TouchableComponent';
+import {StyleSheet, View, TextInput, Dimensions, Text, Pressable, ScrollView} from "react-native";
+import { PLAYLISTS } from '../dummy data/data';
 import { AntDesign } from '@expo/vector-icons'; 
 import GenreCard from '../components/GenreCard';
+import SongPlayer from '../components/SongPlayer'
+import CustomModal from '../components/CustomModal';
+import {useSelector} from "react-redux";
 
 const SearchScreen = (props) =>{
 
+    const cardInfo = useSelector(state => state.currentSong.cardInfo);
+    const [visibility, setVisibility] = useState(false)
+
+    const modalShown = () =>{
+        setVisibility(true);
+    }
+
     return(
         <View style={styles.container}>
+            {cardInfo && <CustomModal setVisibility={setVisibility} visibility={visibility}></CustomModal> }
+            <ScrollView style={styles.scrollView}>
                 <Text style={styles.titleText}>Buscar</Text>
-
-                
                 <View style={styles.inputContainer}>
                     <View style={styles.searchIcon}>
                         <AntDesign name="search1" size={24} color="black" />
@@ -24,30 +34,36 @@ const SearchScreen = (props) =>{
                 <View>
                     <Text style={styles.subtitleText}>Los géneros que más escuchaste</Text>
                     <View style={styles.cardContainer}>
-                        <GenreCard style={styles.card}>Latino</GenreCard>
-                        <GenreCard style={styles.card}>Rock</GenreCard>
+                        <GenreCard style={styles.card} cardInfo={PLAYLISTS[5]} {...props}>Latino</GenreCard>
+                        <GenreCard style={styles.card} cardInfo={PLAYLISTS[10]} {...props}>Rock</GenreCard>
                     </View>
                 </View>
 
                 <View>
                     <Text style={styles.subtitleText}>Categorías populares</Text>
                     <View style={styles.cardContainer}>
-                        <GenreCard>Trap</GenreCard>
-                        <GenreCard>Chill</GenreCard>
+                        <GenreCard cardInfo={PLAYLISTS[6]} {...props}>Trap</GenreCard>
+                        <GenreCard cardInfo={PLAYLISTS[9]} {...props}>Chill</GenreCard>
                     </View>
                 </View>
 
                 <View>
                     <Text style={styles.subtitleText}>Explorar todo</Text>
                     <View style={styles.cardContainer}>
-                        <GenreCard>agustoAlaberga</GenreCard>
-                        <GenreCard>Creado para ti</GenreCard>
+                        <GenreCard cardInfo={PLAYLISTS[3]} {...props}>agustoalaverga</GenreCard>
+                        <GenreCard cardInfo={PLAYLISTS[1]} {...props}>Creado para ti</GenreCard>
                     </View>
                     <View style={styles.cardContainer}>
-                        <GenreCard>Reggaeton</GenreCard>
-                        <GenreCard>Instrumental</GenreCard>
+                        <GenreCard cardInfo={PLAYLISTS[14]} {...props}>Reggaeton</GenreCard>
+                        <GenreCard cardInfo={PLAYLISTS[11]} {...props}>Instrumental</GenreCard>
                     </View>
                 </View>
+                </ScrollView>
+            {cardInfo &&
+                <Pressable onPress={modalShown}>
+                    <SongPlayer cardInfo={cardInfo}/>
+                </Pressable>
+            }
         </View>
     )
 }
