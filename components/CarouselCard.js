@@ -16,8 +16,8 @@ const CarouselCard = (props) =>{
     <TouchableComponent>
         <Card style={styles.card}>
                 <Image style={styles.image}
-                            source={{uri:'https://upload.wikimedia.org/wikipedia/en/a/a8/Razorsedge.jpg'}}/>
-                <Text style={styles.text}>STARSET, Thousand Foot, Krutch, Smash...</Text>
+                            source={{uri:"https://images.genius.com/573a07cba6e81c8bf69f279565093eca.1000x1000x1.png"}}/>
+                <Text style={styles.text}>Yonaguni</Text>
                 
         </Card>
     </TouchableComponent>

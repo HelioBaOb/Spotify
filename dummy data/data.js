@@ -2,9 +2,9 @@ export const PLAYLISTS =[
     {
         id: 1,
         name:"Tus me gusta",
-        imgUrl:'https://besthqwallpapers.com/Uploads/25-2-2021/157480/thumb2-the-flash-logo-4k-minimalism-red-background-creative.jpg',
+        imgUrl:'https://misc.scdn.co/liked-songs/liked-songs-300.png',
         duration: "39 min 26 seg",
-        creator: "Helio Barriga Obregon",
+        creator: "Spotify",
         songs:[
             {
                 id: 1,
@@ -50,6 +50,14 @@ export const PLAYLISTS =[
                 duration: "4 min 0 seg",
                 artist: "Coolio",
                 lyrics: "As I walk through the valley of the shadow of death I take a look at my life and realize there's nothin' left 'Cause I've been blastin' and laughin' so long that Even my momma thinks that my mind is gone But I ain't never crossed a man that didn't deserve it Me be treated like a punk, you know that's unheard of You better watch how you talkin' and where you walkin' Or you and your homies might be lined in chalk I really hate to trip, but I gotta loc As they croak, I see myself in the pistol smoke Fool, I'm the kinda G the little homies wanna be like On my knees in the night, sayin' prayers in the streetlight Been spendin' most their lives Livin' in a gangsta's paradise Been spendin' most their lives Livin' in a gangsta's paradise Keep spendin' most our lives Livin' in a gangsta's paradise Keep spendin' most our lives Livin' in a gangsta's paradise",
+            },
+            {
+              id: 6,
+              name:"Phoenix",
+              imgUrl:'https://cdns-images.dzcdn.net/images/cover/45eecedfdf3496b8bb31831ea0e93a30/500x500.jpg',
+              duration: "3 min 17 seg",
+              artist: "League of Legends",
+              lyrics: "What are you willing to lose? You cover your wounds, but underneath them A million voices in your head that whisper, Stop, now Another twist of the knife, turn of the screws It's all in your mind and it's fighting you Arm yourself, a storm is coming Well, kid, what you gonna do now? It's your reflection looking back to pull you down So are you gonna die today or make it out alive? You gotta conquer the monster in your head and then you'll fly Fly, phoenix, fly It's time for a new empire Go bury your demons then tear down the ceiling Phoenix, fly",
             }
         ]
     },

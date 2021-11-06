@@ -49,14 +49,20 @@ const MainScreen = (props) =>{
                     <Text style={styles.subText}>Sunflower</Text>
                     </View>
                 </View>
-            
-            {/* <Carousel
-                ref={(c) => {}}
-                data={}
-                renderItem={}
-                sliderWidth={}
-                itemWidth={}
-            /> */}
+
+                <View style={styles.carouselList}>
+                    <Carousel
+                        data={PLAYLISTS}
+                        keyExtractor={item => item.id.toString()}
+                        sliderWidth={Dimensions.get('window').width}
+                        itemWidth={Dimensions.get('window').width}
+                        itemHeight={Dimensions.get('window').height}
+                        renderItem={itemData => (
+                            <CarouselCard cardInfo = {itemData.item} {...props}/>
+                        )}
+                    />
+                </View>
+
                 <View style={styles.carouselList}>
                     <CarouselCard></CarouselCard>
                 </View>
@@ -87,6 +93,7 @@ const styles = StyleSheet.create({
     },
     playlistContainer: {
         marginTop: 20,
+        marginLeft: 10,
     },
     cardContainer: {
         right: 15,
@@ -94,12 +101,16 @@ const styles = StyleSheet.create({
         
     },
     carouselContainer: {
-
+        paddingTop: 10,
     },  
     carouselHeader: {
         flexDirection: 'row',
         paddingTop: Dimensions.get('window').height * 0.02,
     },
+    carouselList: {
+        width: Dimensions.get('window').height * 0.5,
+        height: Dimensions.get('window').height * 0.5,
+    },  
     titleText: {
         fontSize: 25,
         paddingTop: Dimensions.get('window').height * 0.08,

@@ -75,7 +75,7 @@ const LibraryScreen = (props) =>{
                 showsVerticalScrollIndicator={false}
                 keyExtractor={item => item.id.toString()}
                 renderItem={itemData => (
-                    <PlaylistCard cardInfo={itemData.item} /*press={}*/ {...props}/>
+                    <PlaylistCard cardInfo={itemData.item} {...props}/>
                 )
                 }
                 />
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#191414',
     },
     headerText: {
-        fontFamily: 'circular-bold',
+        fontFamily: 'CircularStd-Black',
         textAlign: 'center',
         color: '#fff',
         fontSize: 19,

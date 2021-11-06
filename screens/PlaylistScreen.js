@@ -61,15 +61,15 @@ const PlaylistScreen = (props) =>{
                     </View>
                 </View>
                 <View style={styles.listContainer}>
-                <FlatList
-                    data={props.route.params.cardInfo.songs}
-                    showsVerticalScrollIndicator={false}
-                    keyExtractor={item => item.id.toString()}
-                    renderItem={itemData => (
-                        <SongCard cardInfo={itemData.item}{...props}/>
-                    )
-                    }
-                    />
+                    <FlatList
+                        data={props.route.params.cardInfo.songs}
+                        showsVerticalScrollIndicator={false}
+                        keyExtractor={item => item.id.toString()}
+                        renderItem={itemData => (
+                            <SongCard cardInfo={itemData.item}{...props}/>
+                        )
+                        }
+                        />
                 </View>
                 </LinearGradient>
             </View>
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     listContainer: {
-        height: Dimensions.get('window').height * 0.92,
+        height: Dimensions.get('window').height * 2,
         padding: 10,
         marginTop: 30
     }

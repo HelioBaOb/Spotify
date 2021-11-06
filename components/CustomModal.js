@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, Image, Dimensions, Modal, Button, ScrollView} fr
 import TouchableComponent from "./UI/TouchableComponent";
 import {useSelector} from "react-redux";
 import { MaterialIcons } from '@expo/vector-icons';
-import { SimpleLineIcons } from '@expo/vector-icons'; 
+import { Feather } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { FontAwesome } from '@expo/vector-icons'; 
 import { AntDesign } from '@expo/vector-icons'; 
@@ -24,7 +24,7 @@ const CustomModal = (props) =>{
     return `#${randomColor}`;
     };
 
-    const aleatorio = () =>{
+    const random = () =>{
         if(focusedA == false){
             setFocusedA(true);
         } else{
@@ -32,7 +32,7 @@ const CustomModal = (props) =>{
         }
     }
 
-    const repetir = () =>{
+    const loop = () =>{
         if(focusedR == false){
             setFocusedR(true);
         } else{
@@ -46,21 +46,22 @@ const CustomModal = (props) =>{
             style={{ backgroundColor: "#191414" }}
             visible={props.visibility}
             animationType="slide">
-                    <View style={{ flex: 1 }}>
+                    <View style={styles.container}>
                         <LinearGradient 
                             colors={['#525272', '#191414']} 
                             start={{ x: 0, y: 0}} 
                             end={{ x: 0, y: 0.9 }} 
                             locations={[0, 1]} 
                             style={styles.linearGradient}>
+
                             <ScrollView style={styles.scrollView}>
                                 <View style={styles.modalHeader}>
                                     <TouchableComponent>
-                                    <MaterialIcons style={{marginRight:40, marginLeft:20}} name="keyboard-arrow-down" size={24} color="white" onPress={() => props.setVisibility(false)}/>
+                                        <MaterialIcons style={{marginRight:40, marginLeft:20}} name="keyboard-arrow-down" size={24} color="white" onPress={() => props.setVisibility(false)}/>
                                     </TouchableComponent>
-                                    <Text style={styles.topText}>REPRODUCIENDO DESDE PLAYLIST</Text>
+                                        <Text style={styles.topText}>REPRODUCIENDO DESDE PLAYLIST</Text>
                                     <TouchableComponent>
-                                    <SimpleLineIcons style={{marginLeft:30}} name="options-vertical" size={18} color="white"/>
+                                        <Feather style={{marginRight:20, marginLeft:40}} name="more-vertical" size={24} color="white" />
                                     </TouchableComponent>
                                 </View>
                                 <Text style={styles.topText}>{cardInfo.name} {/*props del nombre la playlist*/}</Text>
@@ -71,35 +72,37 @@ const CustomModal = (props) =>{
                                 </View>
                                 <View style={styles.songName}>
                                     {/*props de la imagen de la canción*/}
-                                    <Text style={{fontSize:22, color:'white'}}>{cardInfo.name}</Text>
+                                    <Text style={styles.songNameText}>{cardInfo.name}</Text>
                                 </View>
                                 <View style={styles.author}>
                                     {/*props de la imagen del autor*/}
-                                    <Text style={{fontSize:17, color:'#D0C7C7'}}>{cardInfo.artist}</Text>
+                                    <Text style={styles.authorText}>{cardInfo.artist}</Text>
                                 </View>
                                 <View style={styles.slider}>
                                     {/*props de la duración de la canción*/}
-                                    <Text style={{fontSize:12, color:'#D0C7C7', marginTop: 5}}>{cardInfo.duration}</Text>
+                                    <Text style={styles.songDuration}>{cardInfo.duration}</Text>
                                 </View>
                                 <View style={styles.changeButtons}>
-                                        <FontAwesome name="random" size={21} color={focusedA?"#1DB954":"white"} onPress={aleatorio}/>
-                                    <TouchableComponent style={{marginLeft:Dimensions.get('window').height * 0.06, marginTop: Dimensions.get('window').height * -0.009,}}>
+                                    <TouchableComponent>  
+                                        <FontAwesome name="random" size={21} color={focusedA?"#1DB954":"white"} onPress={random}/>
+                                    </TouchableComponent>       
+                                    <TouchableComponent style={styles.icon}>
                                         <AntDesign name="stepbackward" size={32} color="white"/>
                                     </TouchableComponent>
-                                    <TouchableComponent style={{marginLeft:Dimensions.get('window').height * 0.03, marginTop: Dimensions.get('window').height * -0.042,}}>
+                                    <TouchableComponent style={styles.playIcon}>
                                         <Ionicons name="play-circle-sharp" size={85} color="white" />
                                     </TouchableComponent>
-                                    <TouchableComponent style={{marginLeft:Dimensions.get('window').height * 0.023, marginTop: Dimensions.get('window').height * -0.009,}}>
+                                    <TouchableComponent style={styles.icon}>
                                         <AntDesign name="stepforward" size={32} color="white" />
                                     </TouchableComponent>
-                                    <View style={styles.repeatButton}>
-                                        <Ionicons name="repeat-outline" size={28} color={focusedR?"#1DB954":"white"} onPress={repetir} />
+                                    <View style={styles.loopIcon}>
+                                        <Ionicons name="repeat-outline" size={28} color={focusedR?"#1DB954":"white"} onPress={loop} />
                                     </View>
                                 </View>
                                 <View style={[styles.lyrics, {backgroundColor:`${generateColor()}`}]}>
-                                    <Text style={{fontSize:18, color:'#FFFFFF', marginTop: 10, marginLeft: 15}}>lyrics</Text>
+                                    <Text style={styles.lyricsTitle}>LYRICS</Text>
                                     {/*props de las lyrics de la canción*/}
-                                    <Text style={{fontSize:24, color:'#FFFFFF', marginTop: 10, marginLeft: 15, marginRight: 60}}>{cardInfo.lyrics}</Text>
+                                    <Text style={styles.lyricsText}>{cardInfo.lyrics}</Text>
                                 </View>
                             </ScrollView>
                         </LinearGradient>
@@ -113,58 +116,96 @@ export default CustomModal;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10,
-        // backgroundColor: '#191414',
-        backgroundColor: '#191414'
     },
     modalHeader:{
-        marginTop:15,
+        marginTop: 15,
         flexDirection:'row'
     },
     topText:{
-        color: "white",
+        fontFamily: 'circular-book',
+        color: 'white',
         textAlign:'center'
     },
     linearGradient: {
         height: Dimensions.get('window').height,
     },
     songImg:{
-        marginTop: Dimensions.get('window').height * 0.14,
-        marginLeft: Dimensions.get('window').height * 0.030,
-        height :Dimensions.get('window').height * 0.40,
-        width :Dimensions.get('window').height * 0.40
+        marginTop: Dimensions.get('window').height * 0.05,
+        marginLeft: Dimensions.get('window').height * 0.037,
+        height :Dimensions.get('window').height * 0.47,
+        width :Dimensions.get('window').height * 0.47
     },
     songName:{
         marginLeft: Dimensions.get('window').height * 0.037,
         marginTop: Dimensions.get('window').height * 0.1,
     },
+    songNameText: {
+        fontFamily: 'circular-book',
+        fontSize:22, 
+        color:'white'
+    },  
     author:{
         marginLeft: Dimensions.get('window').height * 0.037,
         marginTop: Dimensions.get('window').height * 0.0001,
     },
+    authorText: {
+        fontFamily: 'circular-book',
+        fontSize:17, 
+        color:'#D0C7C7'
+    },
     slider: {
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
-        width: Dimensions.get('window').height * 0.389,
-        marginLeft: Dimensions.get('window').height * 0.030,
+        backgroundColor: "#A49A9A",
+        width: Dimensions.get('window').height * 0.48,
+        marginLeft: Dimensions.get('window').height * 0.037,
         borderRadius: 2,
         height: 4,
         marginVertical: 16,
     },
+    songDuration: {
+        fontFamily: 'circular-book',
+        fontSize:12, 
+        color:'#D0C7C7', 
+        marginTop: 5
+    },  
     changeButtons:{
-        marginLeft: Dimensions.get('window').height * 0.037,
-        marginTop: Dimensions.get('window').height * 0.03,
+        marginLeft: Dimensions.get('window').height * 0.028,
+        marginTop: Dimensions.get('window').height * 0.035,
         flexDirection:'row'
     },
-    repeatButton:{
+    icon: {
+        marginLeft: Dimensions.get('window').height * 0.06, 
+        marginTop: Dimensions.get('window').height * -0.009
+    },
+    playIcon: {
+        marginLeft: Dimensions.get('window').height * 0.06, 
+        marginTop: Dimensions.get('window').height * -0.042
+    },
+    loopIcon:{
         marginLeft: Dimensions.get('window').height * 0.0455
     },
+    lyricsTitle: {
+        fontFamily: 'circular-book',
+        fontSize:18, 
+        color:'#FFFFFF', 
+        marginTop: 10, 
+        marginLeft: 15
+    },
+    lyricsText: {
+        fontFamily: 'circular-book',
+        fontSize: 20, 
+        color:'#FFFFFF', 
+        marginTop: 10,
+        marginLeft: 15, 
+        marginRight: 10,
+        lineHeight: 25,
+    },
     lyrics:{
-        height :Dimensions.get('window').height * 0.40,
-        width :Dimensions.get('window').height * 0.40,
+        height: Dimensions.get('window').height * 1.5,
+        width: Dimensions.get('window').height * 0.48,
         marginLeft: Dimensions.get('window').height * 0.030,
         marginBottom: Dimensions.get('window').height * 0.1,
         marginTop: Dimensions.get('window').height * 0.03,
-        borderRadius:8,
+        borderRadius: 8,
         backgroundColor:'#16D1A2'
     }
 
