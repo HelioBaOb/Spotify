@@ -12,17 +12,9 @@ import { Ionicons } from '@expo/vector-icons';
 
 const CustomModal = (props) =>{
 
-    const [visibility, setVisibility] = useState(false)
     const [focusedA, setFocusedA] = useState(false)
     const [focusedR, setFocusedR] = useState(false)
     const cardInfo = useSelector(state => state.currentSong.cardInfo);
-
-    const generateColor = () => {
-        const randomColor = Math.floor(Math.random() * 1777215)
-        .toString(16)
-        .padStart(6, '0');
-    return `#${randomColor}`;
-    };
 
     const random = () =>{
         if(focusedA == false){
@@ -39,6 +31,7 @@ const CustomModal = (props) =>{
             setFocusedR(false);
         }
     }
+
 
     return(
 
@@ -99,7 +92,7 @@ const CustomModal = (props) =>{
                                         <Ionicons name="repeat-outline" size={28} color={focusedR?"#1DB954":"white"} onPress={loop} />
                                     </View>
                                 </View>
-                                <View style={[styles.lyrics, {backgroundColor:`${generateColor()}`}]}>
+                                <View style={[styles.lyrics, {backgroundColor: props.customColor}]}>
                                     <Text style={styles.lyricsTitle}>LYRICS</Text>
                                     {/*props de las lyrics de la canción*/}
                                     <Text style={styles.lyricsText}>{cardInfo.lyrics}</Text>
@@ -197,7 +190,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginLeft: 15, 
         marginRight: 10,
-        lineHeight: 25,
+        lineHeight: 30,
     },
     lyrics:{
         height: Dimensions.get('window').height * 1.5,
@@ -206,7 +199,6 @@ const styles = StyleSheet.create({
         marginBottom: Dimensions.get('window').height * 0.1,
         marginTop: Dimensions.get('window').height * 0.03,
         borderRadius: 8,
-        backgroundColor:'#16D1A2'
     }
 
 })

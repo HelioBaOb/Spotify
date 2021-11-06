@@ -4,13 +4,15 @@ import TouchableComponent from '../components/UI/TouchableComponent';
 import { MaterialIcons } from '@expo/vector-icons'; 
 import { AntDesign } from '@expo/vector-icons'; 
 import { Foundation } from '@expo/vector-icons'; 
+import CustomModal from "./CustomModal";
 
 const SongPlayer =  (props) => {
-
+  
   const [focusedC, setFocusedC] = useState(false);
   const [focusedH, setFocusedH] = useState(false);
   const [focusedP, setFocusedP] = useState(false);
-
+  const [visibility, setVisibility] = useState(false)
+  
   const computer = () =>{
     if(focusedC == false){
         setFocusedC(true);
@@ -35,29 +37,43 @@ const SongPlayer =  (props) => {
     }
   }
 
-  const handleModal = () =>{
-    setVisibility(true);
-  }
+    const modalShown = () =>{
+        setVisibility(true);
+    }
+
+    const generateColor = () => {
+      const randomColor = Math.floor(Math.random() * 1777215)
+      .toString(16)
+      .padStart(6, '0');
+  return `#${randomColor}`;
+  };
 
 
   return (
-      <View style={styles.container}>
-        <Image style={styles.img} source={{uri:props.cardInfo.imgUrl}}/>
-        <Text style={styles.title}>{props.cardInfo.name}</Text>
-        <Text style={styles.author}>{props.cardInfo.artist}</Text>
-        
-        <View>
-          <View style={styles.computer}>
+
+      <View style={[styles.container, props.customStyle]}>
+        {props.cardInfo && <CustomModal customColor={generateColor()} setVisibility={setVisibility} visibility={visibility}></CustomModal> }
+          <View style={styles.pressableContainer}>
+          <TouchableComponent onPress={modalShown}>
+            <Image style={styles.img} source={{uri:props.cardInfo.imgUrl}}/>
+              <View style={styles.infoContainer}>
+                <Text style={styles.title}>{props.cardInfo.name}</Text>
+                <Text style={styles.author}>{props.cardInfo.artist}</Text>
+              </View>
+          </TouchableComponent >
+          </View>
+        <View style={styles.iconContainer}>
+          <View style={styles.icon}>
             <TouchableComponent onPress={computer}>
               <MaterialIcons name="computer" size={30} color={focusedC?"#1DB954":"white"}/>
             </TouchableComponent>
           </View>
-          <View style={styles.heart}>
+          <View style={styles.heartIcon}>
             <TouchableComponent onPress={heart}>
               <AntDesign name="heart" size={24} color={focusedH?"#1DB954":"white"}/>
             </TouchableComponent>
           </View>
-          <View style={styles.pause_play}>
+          <View style={styles.icon}>
             <TouchableComponent onPress={play}>
               {focusedP && <Foundation name="pause" size={30} color="white" />}
               {!focusedP && <Foundation name="play" size={30} color="white" />}
@@ -73,36 +89,49 @@ export default SongPlayer;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "blue",
-    width:Dimensions.get('window').height * 1,
-    height:Dimensions.get('window').height * 1,
+    flexDirection:'row',
+    width:Dimensions.get('window').width,
+    height:Dimensions.get('window').height,
     marginBottom: Dimensions.get('window').height * 0.06,
   },
+  pressableContainer: {
+    width:Dimensions.get('window').width * .6,
+    height:Dimensions.get('window').height,
+  },
+  infoContainer: {
+    width:Dimensions.get('window').width * .6,
+    height:Dimensions.get('window').height,
+  },
   title: {
+    fontFamily: 'circular-bold',
     color: "white",
     marginLeft:Dimensions.get('window').height * 0.078,
     marginTop:Dimensions.get('window').height * -0.056,
   },
   author: {
+    fontFamily: 'circular-book',
+    fontSize: 12,
     color: "#D0C7C7",
     marginLeft:Dimensions.get('window').height * 0.078,
     marginTop:Dimensions.get('window').height * -0.004,
   },
   img:{
-    width:Dimensions.get('window').height * 0.07,
-    height:Dimensions.get('window').height * 0.07,
-    marginLeft:-8
+    width:Dimensions.get('window').width * 0.15,
+    height:Dimensions.get('window').height * 0.077,
+    marginHorizontal:Dimensions.get('window').width * -0.02,
+    marginVertical:Dimensions.get('window').height * -0.00012
   },
-  computer:{
-    marginLeft:Dimensions.get('window').height * 0.33,
-    marginTop:Dimensions.get('window').height * -0.045,
+  iconContainer:{
+    flexDirection: 'row',
+    width:Dimensions.get('window').width * .4,
+    height:Dimensions.get('window').height,
   },
-  heart:{
-    marginLeft:Dimensions.get('window').height * 0.4,
-    marginTop:Dimensions.get('window').height * -0.043,
+  icon:{
+    paddingVertical: Dimensions.get('window').height * 0.02,
+    paddingHorizontal: Dimensions.get('window').width * 0.03,
   },
-  pause_play:{
-    marginLeft:Dimensions.get('window').height * 0.47,
-    marginTop:Dimensions.get('window').height * -0.045,
-  }
+  heartIcon:{
+    paddingVertical: Dimensions.get('window').height * 0.025,
+    paddingHorizontal: Dimensions.get('window').width * 0.03,
+  },
 });

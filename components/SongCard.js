@@ -56,14 +56,14 @@ const styles = StyleSheet.create({
         
     },
     titleText : {
-        // fontFamily:'roboto-regular',
+        fontFamily:'circular-book',
         paddingTop: 10,
         paddingLeft: 2,
         fontSize: 15,
         color: 'white'
     },
     descriptionText : {
-        // fontFamily:'roboto-regular',
+        fontFamily:'circular-book',
         paddingTop: 2,
         paddingLeft: 5,
         fontSize: 10,

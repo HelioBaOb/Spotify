@@ -50,7 +50,8 @@ export const PLAYLISTS =[
                 duration: "4 min 0 seg",
                 artist: "Coolio",
                 lyrics: "As I walk through the valley of the shadow of death I take a look at my life and realize there's nothin' left 'Cause I've been blastin' and laughin' so long that Even my momma thinks that my mind is gone But I ain't never crossed a man that didn't deserve it Me be treated like a punk, you know that's unheard of You better watch how you talkin' and where you walkin' Or you and your homies might be lined in chalk I really hate to trip, but I gotta loc As they croak, I see myself in the pistol smoke Fool, I'm the kinda G the little homies wanna be like On my knees in the night, sayin' prayers in the streetlight Been spendin' most their lives Livin' in a gangsta's paradise Been spendin' most their lives Livin' in a gangsta's paradise Keep spendin' most our lives Livin' in a gangsta's paradise Keep spendin' most our lives Livin' in a gangsta's paradise",
-            }
+            },
+
         ]
     },
     {
@@ -104,7 +105,8 @@ export const PLAYLISTS =[
                 duration: "4 min 03 seg",
                 artist: "Pantera",
                 lyrics: "Oh, come on! Under the lights where we stand tall Nobody touches us at all Showdown, shootout, spread fear within, without We're gonna take what's ours to have Spread the word throughout the land They say bad guys wear black We're tagged and can't turn back You see us comin' And you all together run for cover We're taking over this town Here we come reach for your gun And you better listen well, my friend, you see It's been slowed down below Aimed at you, we're the cowboys from hell Deed is done again, we've won Ain't talking no tall tales friend 'Cause high noon, your doom Comin' for you we're the cowboys from hell",
-            }
+            },
+
         ]
     },
     {
@@ -158,7 +160,7 @@ export const PLAYLISTS =[
     },
     {
         id: 4,
-        name:"Los Monos Árticos",
+        name:"Arctic Monkeys",
         imgUrl:'https://beyondvinyl.co.uk/wp-content/uploads/2020/04/arctic-monkeys-am.jpg',
         duration: "1 hr 28 min",
         creator: "Helio Barriga Obregon",
@@ -561,7 +563,7 @@ export const PLAYLISTS =[
             imgUrl:'https://images-na.ssl-images-amazon.com/images/I/81qaoCLTt3L._AC_UL600_SR600,600_.jpg',
             duration: "2 min 16 seg",
             artist: "Kevin Kiner",
-            lyrics: "---",
+            lyrics: "Instrumental",
           },
           {
             id: 2,
@@ -569,7 +571,7 @@ export const PLAYLISTS =[
             imgUrl:'https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/64/7e/f6/647ef6d1-d035-0da3-20a6-3f7a468291de/86728da5-d8ba-4b68-88eb-b585afebe664.jpg/400x400bb.jpg',
             duration: "3 min 11 seg",
             artist: "Sans Souci",
-            lyrics: "---",
+            lyrics: "Instrumental",
           },
           {
             id: 3,
@@ -577,7 +579,7 @@ export const PLAYLISTS =[
             imgUrl:'https://f4.bcbits.com/img/a0626843871_10.jpg',
             duration: "3 min 7 seg",
             artist: "The Deli",
-            lyrics: "---",
+            lyrics: "Instrumental",
           },
           {
             id: 4,
@@ -589,11 +591,11 @@ export const PLAYLISTS =[
           },
           {
             id: 5,
-            name:"Strad",
-            imgUrl:'https://f4.bcbits.com/img/a1112985681_10.jpg',
-            duration: "3 min 18 seg",
-            artist: "C418",
-            lyrics: "---",
+            name:"Formed by Glaciers",
+            imgUrl:'https://i.ytimg.com/vi/Or0yKOUXcNo/maxresdefault.jpg',
+            duration: "7 min 28 seg",
+            artist: "Kubbi",
+            lyrics: "Instrumental",
           },
         ]
     },
@@ -744,5 +746,55 @@ export const PLAYLISTS =[
           },
         ]
     },
+    {
+      id: 16,
+      name:"Fiesta",
+      creator: "David Ruiz Lara",
+      imgUrl:'https://images.genius.com/573a07cba6e81c8bf69f279565093eca.1000x1000x1.png',
+      duration: "10h 41m",
+      songs:[
+        {
+          id: 1,
+          name:"Yonaguni",
+          description:"descripcion",
+          imgUrl:'https://images.genius.com/573a07cba6e81c8bf69f279565093eca.1000x1000x1.png',
+          duration: "3 min 26 seg",
+          artist: "Bad Bunny",
+          lyrics: "Aunque sé que no debo, ey Pensar en ti, bebé, pero cuando bebo Me viene tu nombre, tu cara Tu risa y tu pelo, ey Dime dónde tú está', que yo por ti cojo un vuelo Y a Yonaguni le llego, ey No me busque' en Instagram Mami, búscame en casa Pa' que vea' lo que pasa, ey Si tú me prueba', te casa', ey Ese cabrón ni te abraza Y yo loco por tocarte Pero ni me atrevo a textearte Tú con cualquier outfit la parte' Mami, tú ere' aparte Shorty, tiene' un culo bien grande, eh De-demasiao' grande Y yo lo tengo estudiao', ya mismo me gradúo Y en la cara me lo tatúo Vi que viste mi story y subiste una pa' mí Yo que me iba a dormir, ey En la disco habían mil Y yo bailando contigo en mi mente Aunque sé que no debo Pensar en ti, bebé, pero cuando bebo Me viene tu nombre, tu cara Tu risa y tu pelo, ey Dime dónde tú está', que yo por ti cojo un vuelo Y a Yonaguni le llego",
+        },
+        {
+          id: 2,
+          name:"Peppas",
+          imgUrl:'https://cdns-images.dzcdn.net/images/cover/1b88acc901e3beff139b5b4eea025802/500x500.jpg',
+          duration: "4 min 47 seg",
+          artist: "Farruko",
+          lyrics: "No me importa lo que de mí se diga Vida usted su vida, que yo vivo la mía Que solo es una, disfruta el momento Que el tiempo se acaba y pa'trás no vira Bebiendo, fumando y jodiendo Sigo vacilando de party to' los día' Síguelo, oh-oh-oh, oh-oh-oh, oh-oh (Farru) Síguelo, oh-oh-oh, oh-oh-oh, oh-oh (la rola y pepa)",
+        },
+        {
+          id: 3,
+          name:"Todo de ti",
+          imgUrl:'https://i.scdn.co/image/ab67616d0000b273c1449d5655128274517f3733',
+          duration: "3 min 19 seg",
+          artist: "Rauw Alejandro",
+          lyrics: "Aceleraste mis latidos Es que me gusta todo de ti De to'as tus partes, ¿cuál decido? Es que me gusta todo de ti Es que me gusta todo de ti Es que me gusta todo de ti",
+        },
+        {
+          id: 4,
+          name:"DÁKITI",
+          imgUrl:'https://i.scdn.co/image/ab67616d0000b273005ee342f4eef2cc6e8436ab',
+          duration: "3 min 25 seg",
+          artist: "Bad Bunny, Jhay Cortez",
+          lyrics: "Baby, ya yo me enteré, se nota cuando me ve' Ahí donde no has llegao' sabes que yo te llevaré Y dime qué quieres beber, es que tú eres mi bebé ¿Y de nosotros quién va a hablar? Si no nos dejamos ver",
+        },
+        {
+          id: 5,
+          name:"My Universe",
+          imgUrl:'https://m.media-amazon.com/images/I/A1-7A-nbtOS._SS500_.jpg',
+          duration: "3 min 46 seg",
+          artist: "Coldplay, BTS",
+          lyrics: "In the night, I lie and look up at you When the morning comes, I watch you rise There's a paradise they couldn't capture That bright infinity inside your eyes 매일 밤 네게 날아가 (가)꿈이란 것도 잊은 채나 웃으며 너를 만나 (나) Never-ending forever, baby",
+        },
+      ]
+  },
 
 ]

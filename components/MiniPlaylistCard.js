@@ -14,7 +14,7 @@ const MiniPlaylistCard = (props) =>{
             <TouchableComponent onPress={openPlaylist}>
                 <View style={styles.infoContainer}>
                     <Image style={styles.image}
-                            source={{uri:'https://misc.scdn.co/liked-songs/liked-songs-300.png'}}/>
+                            source={{uri:props.cardInfo.imgUrl}}/>
 
                     <View style={styles.textContainer}>
                         <Text style={styles.text}> {props.children} </Text>
@@ -30,7 +30,7 @@ export default MiniPlaylistCard;
 const styles = StyleSheet.create({
     card: {
         height: Dimensions.get('window').height * 0.07,
-        width: Dimensions.get('window').height * 0.25,
+        width: '45%',
         backgroundColor: '#2A2A2A',
         borderRadius: 4,
     },
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').height * 0.25,
     },  
     text : {
-        // fontFamily:'roboto-regular',
+        fontFamily:'circular-book',
         paddingTop: 12,
         paddingLeft: 3,
         fontSize: 15,

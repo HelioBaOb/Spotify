@@ -57,17 +57,11 @@ export const ListHeader = () => {
     };
 
 const LibraryScreen = (props) =>{
-
+    
     const cardInfo = useSelector(state => state.currentSong.cardInfo);
-    const [visibility, setVisibility] = useState(false)
-
-    const modalShown = () =>{
-        setVisibility(true);
-    }
 
     return(
         <View style={styles.container}> 
-            {cardInfo && <CustomModal setVisibility={setVisibility} visibility={visibility}></CustomModal> }
             <ListHeader/>
                 <FlatList
                 // ListHeaderComponent={ListHeader}
@@ -80,9 +74,9 @@ const LibraryScreen = (props) =>{
                 }
                 />
                 {cardInfo &&
-                    <Pressable onPress={modalShown}>
+
                         <SongPlayer cardInfo={cardInfo}/>
-                    </Pressable>
+                    
                 }
         </View>
     )
@@ -127,6 +121,7 @@ const styles = StyleSheet.create({
         right: 20,
     },
     filterText: {
+        fontFamily: 'circular-book',
         fontSize: 14,
         color: 'white',
         marginLeft: 10,
@@ -140,10 +135,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#191414',
     },
     headerText: {
-        fontFamily: 'CircularStd-Black',
+        fontFamily: 'circular-bold',
         textAlign: 'center',
         color: '#fff',
-        fontSize: 19,
+        fontSize: 18,
         padding: 7,
     }
 });

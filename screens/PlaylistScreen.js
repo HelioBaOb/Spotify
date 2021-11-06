@@ -2,76 +2,88 @@ import React, {useState} from 'react';
 import {StyleSheet, View, Image, Text, FlatList} from "react-native";
 import { Dimensions } from 'react-native';
 import { PLAYLISTS } from '../dummy data/data';
+import { AntDesign, FontAwesome5, Feather, EvilIcons } from '@expo/vector-icons';
 import SongCard from '../components/SongCard';
 import { LinearGradient } from 'expo-linear-gradient';
-import { AntDesign } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
-import { EvilIcons } from '@expo/vector-icons'; 
 import TouchableComponent from '../components/UI/TouchableComponent';
+import SongPlayer from '../components/SongPlayer';
+import {useSelector} from "react-redux";
+
 
 const PlaylistScreen = (props) =>{
+    
+    const cardInfo = useSelector(state => state.currentSong.cardInfo);
+
     return(
             <View style={styles.container}>
-                <LinearGradient 
-                        colors={['#6B6B6B', '#191414']} 
-                        start={{ x: 0, y: 0}} 
-                        end={{ x: 0, y: 0.45 }} 
-                        locations={[0, 1]} 
-                        style={styles.linearGradient}>
+                    <LinearGradient 
+                            colors={['#6B6B6B', '#191414']} 
+                            start={{ x: 0, y: 0}} 
+                            end={{ x: 0, y: 0.45 }} 
+                            locations={[0, 1]} 
+                            style={styles.linearGradient}>
 
-                <View style={styles.header}>  
-                    <View style={styles.imageContainer}>
-                    <Image style={styles.playlistImage}
-                                    source={{uri:props.route.params.cardInfo.imgUrl}}/>
+                    <View style={styles.header}>  
+                        <View style={styles.imageContainer}>
+                        <Image style={styles.playlistImage}
+                                        source={{uri:props.route.params.cardInfo.imgUrl}}/>
+                        </View>
+                        <View style={styles.textContainer}>
+                            <Text style={styles.titleText}>{props.route.params.cardInfo.name}</Text>
+                            <Text style={styles.descriptionText}>{props.route.params.cardInfo.name}</Text>
+                                <View style={styles.autorContainer}>
+                                    <View style={{marginRight: 4}}>
+                                        <FontAwesome5 name="user-circle" size={24} color="white" />
+                                    </View>
+                                    <Text style={styles.autorText}>{props.route.params.cardInfo.creator}</Text>
+                                </View>
+                            <Text style={styles.descriptionText}>{props.route.params.cardInfo.duration}</Text>
+                        </View>
+
+                        <View style={styles.iconContainer}>
+                                <View style={styles.icon}>
+                                    <TouchableComponent>
+                                        <AntDesign name="hearto" size={24} color="#D0C7C7" />
+                                    </TouchableComponent>
+                                </View>
+                                <View style={styles.icon}>
+                                    <TouchableComponent>
+                                        <EvilIcons name="arrow-down" size={34} color="#D0C7C7" />
+                                    </TouchableComponent>
+                                </View>
+                                <View style={styles.icon}>
+                                    <TouchableComponent>
+                                        <Feather name="more-vertical" size={24} color="#D0C7C7" />
+                                    </TouchableComponent>
+                                </View>
+
+                                <View style={styles.playIcon}>
+                                    <TouchableComponent>
+                                        <AntDesign name="play" size={50} color="#1DB954" />
+                                    </TouchableComponent>
+                                </View>
+                        </View>
                     </View>
-                    <View style={styles.textContainer}>
-                        <Text style={styles.titleText}>{props.route.params.cardInfo.name}</Text>
-                        <Text style={styles.descriptionText}>{props.route.params.cardInfo.name}</Text>
-                            <View style={styles.autorContainer}>
-                                
-                            <Image style={styles.autorImage}
-                                    source={{uri:"https://scontent.fmlm3-1.fna.fbcdn.net/v/t1.6435-9/116899667_2000069700127447_4153192373184958620_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=JcRqlY3GCbIAX_Kxp6I&_nc_ht=scontent.fmlm3-1.fna&oh=0635c62a60e4a835faee6872a28bdb53&oe=61911719"}}/>
-                                <Text style={styles.autorText}>{props.route.params.cardInfo.creator}</Text>
-                            </View>
-                        <Text style={styles.descriptionText}>{props.route.params.cardInfo.duration}</Text>
+                    <View style={styles.listContainer}>
+                        <FlatList
+                            data={props.route.params.cardInfo.songs}
+                            showsVerticalScrollIndicator={true}
+
+                            keyExtractor={item => item.id.toString()}
+                            renderItem={itemData => (
+                                <SongCard cardInfo={itemData.item}{...props}/>
+                            )
+                            }
+                            />
                     </View>
 
-                    <View style={styles.iconContainer}>
-                            <View style={styles.icon}>
-                                <TouchableComponent>
-                                    <AntDesign name="hearto" size={24} color="#D0C7C7" />
-                                </TouchableComponent>
-                            </View>
-                            <View style={styles.icon}>
-                                <TouchableComponent>
-                                    <EvilIcons name="arrow-down" size={34} color="#D0C7C7" />
-                                </TouchableComponent>
-                            </View>
-                            <View style={styles.icon}>
-                                <TouchableComponent>
-                                    <Feather name="more-vertical" size={24} color="#D0C7C7" />
-                                </TouchableComponent>
-                            </View>
+                    {cardInfo &&
+                    
+                    <SongPlayer  cardInfo={cardInfo}/>
+                    
+                    }
 
-                            <View style={styles.playIcon}>
-                                <TouchableComponent>
-                                    <AntDesign name="play" size={50} color="#1DB954" />
-                                </TouchableComponent>
-                            </View>
-                    </View>
-                </View>
-                <View style={styles.listContainer}>
-                    <FlatList
-                        data={props.route.params.cardInfo.songs}
-                        showsVerticalScrollIndicator={false}
-                        keyExtractor={item => item.id.toString()}
-                        renderItem={itemData => (
-                            <SongCard cardInfo={itemData.item}{...props}/>
-                        )
-                        }
-                        />
-                </View>
-                </LinearGradient>
+                    </LinearGradient>
             </View>
     )
 }
@@ -80,14 +92,14 @@ export default PlaylistScreen;
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: Dimensions.get('window').height * 0.05,
         flex: 1,
+        marginTop: Dimensions.get('window').height * 0.05,
     },
     linearGradient: {
         height: Dimensions.get('window').height * 1.1,
     },
     header: {
-        marginBottom: 10,
+        marginVertical: Dimensions.get('window').height * 0.02,
         height: Dimensions.get('window').height * 0.45,
         width: '100%',
     },
@@ -95,7 +107,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     playlistImage: {
-        marginTop: 20,
+        marginVertical: Dimensions.get('window').height * 0.01,
         height: Dimensions.get('window').height * 0.22,
         width: Dimensions.get('window').height * 0.22,
     },
@@ -112,32 +124,35 @@ const styles = StyleSheet.create({
         padding: 15,
     },
     titleText: {
-        color: 'white',
+        fontFamily:'circular-bold',
         fontSize: 20,
+        color: 'white',
     },
     descriptionText: {
+        fontFamily:'circular-book',
         paddingTop: 5,
         paddingBottom: 5,
         color: '#D0C7C7'
     },
     autorText: {
+        fontFamily:'circular-book',
         color: 'white',
-        marginLeft: 10,
+        marginHorizontal: Dimensions.get('window').width * 0.01,
     },
     iconContainer:{
-        marginLeft: 5,
+        marginHorizontal: Dimensions.get('window').width * 0.01,
         flexDirection:'row',
     },
     icon:{
-        marginLeft: 20,
+        marginHorizontal: Dimensions.get('window').width * 0.028,
+        marginVertical: Dimensions.get('window').width * -0.01,
     },
     playIcon: {
-        marginLeft: 180,
-        marginBottom: 10,
+        marginVertical: Dimensions.get('window').height * -0.025,
+        marginHorizontal: Dimensions.get('window').width * 0.4,
     },
     listContainer: {
-        height: Dimensions.get('window').height * 2,
-        padding: 10,
-        marginTop: 30
-    }
+        height: Dimensions.get('window').height * 0.46,
+        marginTop: Dimensions.get('window').height * 0.013,
+    },
 });

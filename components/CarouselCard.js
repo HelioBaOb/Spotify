@@ -7,17 +7,17 @@ import Card from "./UI/Card";
 
 const CarouselCard = (props) =>{
 
-    // const openPlaylist = () =>{
-    //     props.navigation.navigate('PlaylistScreen',{cardInfo:props.cardInfo});
-    // }
+    const openPlaylist = () =>{
+        props.navigation.navigate('PlaylistScreen',{cardInfo:props.cardInfo});
+    }
 
 
     return(
-    <TouchableComponent>
+    <TouchableComponent onPress={openPlaylist}>
         <Card style={styles.card}>
                 <Image style={styles.image}
-                            source={{uri:"https://images.genius.com/573a07cba6e81c8bf69f279565093eca.1000x1000x1.png"}}/>
-                <Text style={styles.text}>Yonaguni</Text>
+                            source={{uri:props.cardInfo.imgUrl}}/>
+                <Text style={styles.text}>{props.cardInfo.name}</Text>
                 
         </Card>
     </TouchableComponent>
@@ -28,7 +28,6 @@ export default CarouselCard;
 
 const styles = StyleSheet.create({
     card: {
-        right: 10,
         marginTop: 15,
         width: Dimensions.get('window').height * 0.20,
         height: Dimensions.get('window').height * 0.26,
@@ -38,6 +37,7 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height * 0.20,
     },  
     text: {
+        fontFamily: 'circular-book',
         fontSize: 14,
         paddingTop: 8,
         color: '#D0C7C7',

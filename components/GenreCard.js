@@ -36,8 +36,9 @@ const styles = StyleSheet.create({
         borderRadius: 8,
     },
     title: {
+        fontFamily: 'circular-bold',
         fontSize: 18,
-        padding: 6,
+        padding: 14,
         color: 'white'
     }
 });

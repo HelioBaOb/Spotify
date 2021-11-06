@@ -39,14 +39,14 @@ const styles = StyleSheet.create({
         
     },
     titleText : {
-        // fontFamily:'roboto-regular',
+        fontFamily:'circular-book',
         paddingTop: 10,
         paddingLeft: 5,
         fontSize: 18,
         color: 'white'
     },
     descriptionText : {
-        // fontFamily:'roboto-regular',
+        fontFamily:'circular-book',
         paddingTop: 2,
         paddingLeft: 5,
         fontSize: 12,
