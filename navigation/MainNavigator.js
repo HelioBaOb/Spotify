@@ -8,7 +8,6 @@ import MainScreen from '../screens/MainScreen';
 import LibraryScreen from '../screens/LibraryScreen';
 import SearchScreen from '../screens/SearchScreen';
 import PlaylistScreen from '../screens/PlaylistScreen';
-import CustomModal from '../components/CustomModal';
 import LoginScreen from '../screens/LoginScreen';
 
 const Tab = createBottomTabNavigator();
@@ -41,10 +40,6 @@ export const TabNavigator = () =>{
                     headerShown: false,
                     tabBarIcon:({focused})=><MaterialCommunityIcons name="bookshelf" size={24} color={focused?"white":"grey"} />
                 }}/>
-                <Tab.Screen name="LoginScreen" component={LoginScreen} options={{ 
-                    headerShown: false,
-                    tabBarIcon:({focused})=><Foundation name="home" size={24} color={focused?"white":"grey"} />
-                }}/>
             </Tab.Navigator>
     )
 }
@@ -63,6 +58,17 @@ export const StackMain = () =>{
             </Stack.Navigator>
 
 
+    )
+}
+
+export const StackLogin = () =>{
+    return(
+            <Stack.Navigator>
+                <Stack.Screen name={"LoginScreen"}
+                            component={LoginScreen}
+                            options={{headerShown:false}}
+                />
+            </Stack.Navigator>
     )
 }
 

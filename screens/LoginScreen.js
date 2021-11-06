@@ -1,10 +1,36 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Text, Dimensions, TextInput} from "react-native";
+import {StyleSheet, View, Text, Dimensions, TextInput, Alert} from "react-native";
 import { Entypo } from '@expo/vector-icons'; 
 import TouchableComponent from '../components/UI/TouchableComponent';
 import { Ionicons } from '@expo/vector-icons';
+import {useDispatch} from "react-redux";
+import * as authActions from "../store/actions/authActions";
 
 const LoginScreen = (props) =>{
+
+    const [user, setUser] = useState(null)
+    const [password, setPassword] = useState(null)
+    const dispatch = useDispatch();
+    const onClick = () =>{
+        try {
+            console.log(user, password)
+            user && password ?
+                dispatch(authActions.tryLogin(user, password))
+            :
+                Alert.alert("Error", "Campos vacios", [{text:'ok'}])
+        }catch(e){
+            Alert.alert("Error", e.toString(), [{text:'ok'}])
+        }
+    }
+    const validateUser = (user) =>{
+        console.log(user)
+        setUser(user)
+    }
+    const validatePassword = (password) =>{
+        console.log(password)
+        setPassword(password)
+    }
+
     return(
         <View style={styles.container}>  
             <View style={styles.headerContainer}>
@@ -17,12 +43,14 @@ const LoginScreen = (props) =>{
                     <TextInput 
                                 placeholder={"Usuario"}
                                 style={styles.input}
+                                onChangeText={txt => validateUser(txt)}
                                 />
                 </View>
                 <View style={styles.inputContainer}>
                     <TextInput 
-                                placeholder={"Usuario"}
+                                placeholder={"Contraseña"}
                                 style={styles.input}
+                                onChangeText={txt => validatePassword(txt)}
                                 />
                 </View>
 
@@ -31,7 +59,7 @@ const LoginScreen = (props) =>{
                     <Text style={styles.text}>Manterner Sesión iniciada</Text>
                 </View>
 
-                <TouchableComponent>
+                <TouchableComponent onPress={onClick}>
                     <View style={styles.loginButton}>
                         <Text style={styles.loginText}>INICIAR SESIÓN</Text>
                     </View>

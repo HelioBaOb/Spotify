@@ -11,6 +11,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import authReducer from "./store/reducers/authReducer";
 import currentSongReducer from "./store/reducers/currentSongReducer";
+import LoginValidation from './navigation/LoginValidation';
 
 const rootReducer = combineReducers({
   currentSong: currentSongReducer,
@@ -51,9 +52,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <NavigationContainer>
-          <StackMain/>
-      </NavigationContainer>
+          <LoginValidation/>
     </Provider>
   );
 }

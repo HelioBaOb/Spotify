@@ -50,14 +50,6 @@ export const PLAYLISTS =[
                 duration: "4 min 0 seg",
                 artist: "Coolio",
                 lyrics: "As I walk through the valley of the shadow of death I take a look at my life and realize there's nothin' left 'Cause I've been blastin' and laughin' so long that Even my momma thinks that my mind is gone But I ain't never crossed a man that didn't deserve it Me be treated like a punk, you know that's unheard of You better watch how you talkin' and where you walkin' Or you and your homies might be lined in chalk I really hate to trip, but I gotta loc As they croak, I see myself in the pistol smoke Fool, I'm the kinda G the little homies wanna be like On my knees in the night, sayin' prayers in the streetlight Been spendin' most their lives Livin' in a gangsta's paradise Been spendin' most their lives Livin' in a gangsta's paradise Keep spendin' most our lives Livin' in a gangsta's paradise Keep spendin' most our lives Livin' in a gangsta's paradise",
-            },
-            {
-              id: 6,
-              name:"Phoenix",
-              imgUrl:'https://cdns-images.dzcdn.net/images/cover/45eecedfdf3496b8bb31831ea0e93a30/500x500.jpg',
-              duration: "3 min 17 seg",
-              artist: "League of Legends",
-              lyrics: "What are you willing to lose? You cover your wounds, but underneath them A million voices in your head that whisper, Stop, now Another twist of the knife, turn of the screws It's all in your mind and it's fighting you Arm yourself, a storm is coming Well, kid, what you gonna do now? It's your reflection looking back to pull you down So are you gonna die today or make it out alive? You gotta conquer the monster in your head and then you'll fly Fly, phoenix, fly It's time for a new empire Go bury your demons then tear down the ceiling Phoenix, fly",
             }
         ]
     },
@@ -221,7 +213,7 @@ export const PLAYLISTS =[
         creator: "Helio Barriga Obregon",
         songs:[
           {
-            id: 2,
+            id: 1,
             name:"Contra La Pared",
             imgUrl:'https://www.oxigeno.fm/wp-content/uploads/2019/03/sean-y-balvin.png',
             duration: "3 min 44 seg",
@@ -229,7 +221,7 @@ export const PLAYLISTS =[
             lyrics: "Sp 'longside J Balvin, men El negocio socio De día y de noche me llama (Night and day, leggo', biri-bam-bam-bam) Que quiere de nuevo en mi cama (Latino gang, Want inna me bed, biri-bam-bam) No fue suficiente una vez (Sean da' Paul, uh-yeah, bam-bam-bam) Ahora de día y de noche reclama (That was she said, biri-bam, ¡wuh!) Well in come the ting dem call chicks, it's for kicks and we don't play games Straight business, baby girl Tainy pon the track Hear what mi sayin' Balvin, tell 'em again (Trá)",
           },
           {
-            id: 3,
+            id: 2,
             name:"El Farsante",
             imgUrl:'https://cdns-images.dzcdn.net/images/cover/6145aa97e61ec6c8f701f570f4701741/350x350.jpg',
             duration: "3 min 53 seg",
@@ -237,7 +229,7 @@ export const PLAYLISTS =[
             lyrics: "Extraño tu aroma en la cama De ese que dejas cuando entras y sales Dónde quedaron los besos y todos los planes No sé si vivir o morir Me encuentro en un limbo desde que te fuiste de aquí Eres la única persona que yo quiero que se venga encima de mí Mi libertad no la quiero Tampoco la vida e' soltero Yo lo que quiero es que quieras lo mismo que todos queremos Tener una cuenta de banco con dígitos y muchos ceros Hacer el amor a diario y de paso gastar el dinero",
           },
           {
-            id: 4,
+            id: 3,
             name:"Te Boté - Remix",
             imgUrl:'https://heabbi.com/wp-content/uploads/2018/04/Nio-Garcia-Ft.-Casper-Magico-Darell-Nicky-Jam-Ozuna-Te-Bote-Remix.jpg',
             duration: "6 min 57 seg",
@@ -245,13 +237,21 @@ export const PLAYLISTS =[
             lyrics: "Este es el verdadero remix, baby  Paso muchas noches pensándote Yo no sé ni cómo, ni cuándo fue Pero solo sé que yo recordé Cómo te lo hacía yo aquella vez Y yo no puedo seguir solo, pero sé Que te boté  De mi vida te boté, y te boté Te di banda y te solté, yo te solté Pa'l carajo usted se fue, y usted se fue De mi vida te boté, yo te boté, yeh-yeh, mami",
           },
           {
-            id: 5,
+            id: 4,
             name:"Criminal",
             imgUrl:'https://cdns-images.dzcdn.net/images/cover/122cd03379bff4566c5c39628e945393/500x500.jpg',
             duration: "3 min 51 seg",
             artist: "Ozuna",
             lyrics: "Uh oh oh oh El negrito ojos claros Ozuna Miento Si te digo que en ti no ando pensando Quisiera saber lo que estás haciendo Te llamo pero me sale ocupado, oh Tú me robaste el corazón como un criminal Bebé yo no puedo negarlo Esto que siento por ti no puede ser legal, ah",
           },
+          {
+            id: 5,
+            name:"Phoenix",
+            imgUrl:'https://cdns-images.dzcdn.net/images/cover/45eecedfdf3496b8bb31831ea0e93a30/500x500.jpg',
+            duration: "3 min 17 seg",
+            artist: "League of Legends",
+            lyrics: "What are you willing to lose? You cover your wounds, but underneath them A million voices in your head that whisper, Stop, now Another twist of the knife, turn of the screws It's all in your mind and it's fighting you Arm yourself, a storm is coming Well, kid, what you gonna do now? It's your reflection looking back to pull you down So are you gonna die today or make it out alive? You gotta conquer the monster in your head and then you'll fly Fly, phoenix, fly It's time for a new empire Go bury your demons then tear down the ceiling Phoenix, fly",
+          }
         ]
     },
     {
